@@ -1,0 +1,5 @@
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\bin\Release\DAL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\bin\Release\DAL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Release\DAL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Release\DAL.pdb

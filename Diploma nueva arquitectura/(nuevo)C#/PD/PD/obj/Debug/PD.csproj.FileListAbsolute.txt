@@ -1,0 +1,228 @@
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\PD.exe.config
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.csprojResolveAssemblyReference.cache
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarPerfilaUsuario.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Bloquear_DesbloquearOperacionesaUsuario.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.CalcularDigitosVerificadores.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.CambiarConexionBasedeDatos.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ConfigurarIdioma.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ConsultarBitacora.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.HacerBackUp.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ImportarBitacora.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.LogIn.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.LogOut.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.MenuUsuarios.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Properties.Resources.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.RealizarRestore.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.csproj.GenerateResource.Cache
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\PD.exe
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\PD.pdb
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\BLL.dll
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\BLL.pdb
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.exe
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.pdb
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.MenuPrincipal.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\DAL.dll
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\DAL.pdb
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.DigitosVerificadores.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModificarPerfilUsuario.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\PD.exe.config
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.exe
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.pdb
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMUsuarios.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\PD.exe.config
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.exe
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\PD.exe
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\PD.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\BLL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\DAL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\BLL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\DAL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.csprojResolveAssemblyReference.cache
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMUsuarios.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarPerfilaUsuario.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.CalcularDigitosVerificadores.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.CambiarConexionBasedeDatos.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ConfigurarIdioma.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ConsultarBitacora.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.DigitosVerificadores.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.MenuPrincipal.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModificarPerfilUsuario.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.HacerBackUp.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ImportarBitacora.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.LogIn.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.LogOut.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.MenuUsuarios.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Properties.Resources.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.RealizarRestore.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.csproj.GenerateResource.Cache
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\bin\Debug\PD.exe.config
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.exe
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.pdb
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\bin\Debug\PD.exe
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\bin\Debug\PD.pdb
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\bin\Debug\BLL.dll
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\bin\Debug\DAL.dll
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\bin\Debug\BLL.pdb
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\bin\Debug\DAL.pdb
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.csprojResolveAssemblyReference.cache
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.ABMUsuarios.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarPerfilaUsuario.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.Bloquear_DesbloquearOperacionesaUsuario.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.CalcularDigitosVerificadores.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.CambiarConexionBasedeDatos.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.ConfigurarIdioma.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.ConsultarBitacora.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.DigitosVerificadores.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.MenuPrincipal.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.ModificarPerfilUsuario.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.HacerBackUp.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.ImportarBitacora.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.LogIn.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.LogOut.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.MenuUsuarios.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.Properties.Resources.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.RealizarRestore.resources
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\PD\obj\Debug\PD.csproj.GenerateResource.Cache
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMPerfilesUsuario.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Form1.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMPerfilesUsuario.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Form1.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.HacerRestore.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.HacerRestore.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Idioma.Espanol.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Idioma.Ingles.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Idioma.Espanol.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Idioma.Ingles.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModifyUser.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModifyUser.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMFamilias.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMFamilias.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.EstablecerCadena.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\PD.exe
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\PD.pdb
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\BLL.dll
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\DAL.dll
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\BLL.pdb
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\DAL.pdb
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.csprojResolveAssemblyReference.cache
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMFamilias.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMPerfilesUsuario.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMUsuarios.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarPerfilaUsuario.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Bloquear_DesbloquearOperacionesaUsuario.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.CalcularDigitosVerificadores.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.CambiarConexionBasedeDatos.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ConfigurarIdioma.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ConsultarBitacora.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.DigitosVerificadores.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.EstablecerCadena.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Form1.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.HacerRestore.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Idioma.Espanol.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Idioma.Ingles.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.MenuPrincipal.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModificarPerfilUsuario.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.HacerBackUp.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ImportarBitacora.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.LogIn.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.LogOut.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.MenuUsuarios.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModifyUser.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Properties.Resources.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.RealizarRestore.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.csproj.GenerateResource.Cache
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AltaFamilia.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModificacionFamilia.resources
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarOperacionesAPerfil.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AltaFamilia.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarOperacionesAPerfil.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.EstablecerCadena.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModificacionFamilia.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AltaFamilia.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarOperacionesAPerfil.resources
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModificacionFamilia.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.csproj.ResolveComReference.cache
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarOperacionesaUsuario.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Asignacion_de_Patentes.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.BloquearDesbloquearOperacionesaUsuario.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.DesbloquearOperacionAUsuariocs.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AltaMedio.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABM_Medios.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModificarMedio.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMUbicacion.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.AltaUbicacion.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ModificarUbicacion.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ABMClientes.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Alta_Cliente.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Defaultform.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.CrearNegocio.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ConsultarPedidos.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.ImportarExportarPedidos.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\Newtonsoft.Json.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\Newtonsoft.Json.xml
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.falloDV.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\obj\Debug\PD.Loader.resources
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\PD\bin\Debug\loader.gif
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\PD.exe.config
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.csproj.ResolveComReference.cache
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.exe
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\loader.gif
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\PD.exe
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\PD.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\BLL.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\Newtonsoft.Json.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\DAL.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\BLL.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\Newtonsoft.Json.xml
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\DAL.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.csprojResolveAssemblyReference.cache
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ABM_Medios.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ABMClientes.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ABMFamilias.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ABMPerfilesUsuario.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ABMUbicacion.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ABMUsuarios.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.AltaFamilia.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.AltaMedio.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.AltaUbicacion.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.Alta_Cliente.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.Asignacion_de_Patentes.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarOperacionesAPerfil.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarOperacionesaUsuario.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.AsignarPerfilaUsuario.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.BloquearDesbloquearOperacionesaUsuario.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.CalcularDigitosVerificadores.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.CambiarConexionBasedeDatos.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ConfigurarIdioma.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ConsultarBitacora.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ConsultarPedidos.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.Defaultform.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.DesbloquearOperacionAUsuariocs.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.DigitosVerificadores.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.EstablecerCadena.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.falloDV.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.Form1.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.CrearNegocio.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.HacerRestore.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.Idioma.Espanol.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.Idioma.Ingles.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ImportarExportarPedidos.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.Loader.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.MenuPrincipal.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ModificacionFamilia.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ModificarMedio.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ModificarPerfilUsuario.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.HacerBackUp.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ImportarBitacora.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.LogIn.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.LogOut.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ModificarUbicacion.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.MenuUsuarios.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.ModifyUser.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.Properties.Resources.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.RealizarRestore.resources
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.csproj.GenerateResource.Cache
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\ServiceLayer.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\ServiceLayer.pdb

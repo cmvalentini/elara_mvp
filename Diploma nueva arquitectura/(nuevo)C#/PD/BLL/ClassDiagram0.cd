@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL.ManejadorPerfilUsuario">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIiAABEAIBAABAEAAAACAAAAAAQAQIMQAhMQAAAACA=</HashCode>
+      <FileName>Seguridad\ManejadorPerfilUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Bitacora">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEACAEAAAIEAAAAAAAAAAABAKAAAAAAAAgAAAABAIQ=</HashCode>
+      <FileName>Seguridad\Bitacora.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Idioma">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAEAAAAABACAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Idioma.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.ControladorGeneral">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABEAAAAAAAAgAAACJAAAAgAAAAAAAA=</HashCode>
+      <FileName>Seguridad\ControladorGeneral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Datos">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Seguridad\Datos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Usuario" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFUAQACACACIAAkgABEgAABAIACiJCGIIAAGAAEUAA=</HashCode>
+      <FileName>Seguridad\Usuario.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BLL.DigitoVerificador">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAIAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAACAAECAA=</HashCode>
+      <FileName>Seguridad\DigitoVerificador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Seguridad.BackRestore">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAABAAAAAAAABAAAA=</HashCode>
+      <FileName>Seguridad\BackRestore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Seguridad.Encriptacion">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAEAABAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Seguridad\Encriptacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Seguridad.LeafOperacion">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAAAgAAAQAAAAAAAAAAAAAAAAAAAAAAAACAEAAAAA=</HashCode>
+      <FileName>Seguridad\LeafOperacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Seguridad.Login">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Seguridad\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Cliente">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAEQAABAAAFAAAAgAAAAIAAFAAAAQIAAAAAAI=</HashCode>
+      <FileName>Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Componente">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAgAAAQAAAAAAAAAgAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Composite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.directorioperfil">
+    <Position X="4.25" Y="6.75" Width="1.5" />
+    <InheritanceLine Type="BLL.Componente" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="6.334" />
+        <Point X="5" Y="6.51" />
+        <Point X="5.25" Y="6.51" />
+        <Point X="5.25" Y="6.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CACAAAgAAAQAAAAAAAAAAAAAAAAAAAAAAAACAEAAAAA=</HashCode>
+      <FileName>directorioperfil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Medio">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAQAADAAAAABgAAAAAEAgAAgAAACAAA=</HashCode>
+      <FileName>Medio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Pedido">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAgAAAABBgABIQAAAABBACQAAgAAAwAAAAgQAE=</HashCode>
+      <FileName>Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Ubicacion">
+    <Position X="11.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAQAAAEAARAAAAABIAAQAAAABBQAAAwAAEAAAAA=</HashCode>
+      <FileName>Ubicacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

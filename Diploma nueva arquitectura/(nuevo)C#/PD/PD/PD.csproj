@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8076D77C-A04A-41DA-9701-0E0FB2C8C5AF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PD</RootNamespace>
+    <AssemblyName>PD</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABM Medios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM Medios.Designer.cs">
+      <DependentUpon>ABM Medios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMClientes.Designer.cs">
+      <DependentUpon>ABMClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMFamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMFamilias.Designer.cs">
+      <DependentUpon>ABMFamilias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMFamiliasUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMFamiliasUsuario.Designer.cs">
+      <DependentUpon>ABMFamiliasUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMUbicacion.Designer.cs">
+      <DependentUpon>ABMUbicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMUsuarios.Designer.cs">
+      <DependentUpon>ABMUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Sesion.cs" />
+    <Compile Include="AltaFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaFamilia.Designer.cs">
+      <DependentUpon>AltaFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaMedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaMedio.Designer.cs">
+      <DependentUpon>AltaMedio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaUbicacion.Designer.cs">
+      <DependentUpon>AltaUbicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alta_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta_Cliente.Designer.cs">
+      <DependentUpon>Alta_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asignacion de Patentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asignacion de Patentes.Designer.cs">
+      <DependentUpon>Asignacion de Patentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignarOperacionesAPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarOperacionesAPerfil.Designer.cs">
+      <DependentUpon>AsignarOperacionesAPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignarOperacionesaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarOperacionesaUsuario.Designer.cs">
+      <DependentUpon>AsignarOperacionesaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignarPerfilaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarPerfilaUsuario.Designer.cs">
+      <DependentUpon>AsignarPerfilaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bloquear_DesbloquearOperacionesaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloquear_DesbloquearOperacionesaUsuario.Designer.cs">
+      <DependentUpon>Bloquear_DesbloquearOperacionesaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalcularDigitosVerificadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalcularDigitosVerificadores.Designer.cs">
+      <DependentUpon>CalcularDigitosVerificadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarConexionBasedeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarConexionBasedeDatos.Designer.cs">
+      <DependentUpon>CambiarConexionBasedeDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurarIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurarIdioma.Designer.cs">
+      <DependentUpon>ConfigurarIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarBitacora.Designer.cs">
+      <DependentUpon>ConsultarBitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarPedidos.Designer.cs">
+      <DependentUpon>ConsultarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Defaultform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Defaultform.Designer.cs">
+      <DependentUpon>Defaultform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesbloquearOperacionAUsuariocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesbloquearOperacionAUsuariocs.Designer.cs">
+      <DependentUpon>DesbloquearOperacionAUsuariocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DigitosVerificadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DigitosVerificadores.Designer.cs">
+      <DependentUpon>DigitosVerificadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstablecerCadena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstablecerCadena.Designer.cs">
+      <DependentUpon>EstablecerCadena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearNegocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearNegocio.Designer.cs">
+      <DependentUpon>CrearNegocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="falloDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="falloDV.Designer.cs">
+      <DependentUpon>falloDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HacerRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HacerRestore.Designer.cs">
+      <DependentUpon>HacerRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma\Espanol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Espanol.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma\Ingles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ingles.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarExportarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportarExportarPedidos.Designer.cs">
+      <DependentUpon>ImportarExportarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificacionFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificacionFamilia.Designer.cs">
+      <DependentUpon>ModificacionFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarMedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarMedio.Designer.cs">
+      <DependentUpon>ModificarMedio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarPerfilUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarPerfilUsuario.Designer.cs">
+      <DependentUpon>ModificarPerfilUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HacerBackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HacerBackUp.Designer.cs">
+      <DependentUpon>HacerBackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportarBitacora.Designer.cs">
+      <DependentUpon>ImportarBitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogOut.Designer.cs">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUbicacion.Designer.cs">
+      <DependentUpon>ModificarUbicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuarios.Designer.cs">
+      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyUser.Designer.cs">
+      <DependentUpon>ModifyUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealizarRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizarRestore.Designer.cs">
+      <DependentUpon>RealizarRestore.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ABM Medios.resx">
+      <DependentUpon>ABM Medios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMClientes.resx">
+      <DependentUpon>ABMClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMFamilias.resx">
+      <DependentUpon>ABMFamilias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMFamiliasUsuario.resx">
+      <DependentUpon>ABMFamiliasUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMUbicacion.resx">
+      <DependentUpon>ABMUbicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMUsuarios.resx">
+      <DependentUpon>ABMUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaFamilia.resx">
+      <DependentUpon>AltaFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaMedio.resx">
+      <DependentUpon>AltaMedio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaUbicacion.resx">
+      <DependentUpon>AltaUbicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alta_Cliente.resx">
+      <DependentUpon>Alta_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asignacion de Patentes.resx">
+      <DependentUpon>Asignacion de Patentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignarOperacionesAPerfil.resx">
+      <DependentUpon>AsignarOperacionesAPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignarOperacionesaUsuario.resx">
+      <DependentUpon>AsignarOperacionesaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignarPerfilaUsuario.resx">
+      <DependentUpon>AsignarPerfilaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bloquear_DesbloquearOperacionesaUsuario.resx">
+      <DependentUpon>Bloquear_DesbloquearOperacionesaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalcularDigitosVerificadores.resx">
+      <DependentUpon>CalcularDigitosVerificadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiarConexionBasedeDatos.resx">
+      <DependentUpon>CambiarConexionBasedeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurarIdioma.resx">
+      <DependentUpon>ConfigurarIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarBitacora.resx">
+      <DependentUpon>ConsultarBitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarPedidos.resx">
+      <DependentUpon>ConsultarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Defaultform.resx">
+      <DependentUpon>Defaultform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesbloquearOperacionAUsuariocs.resx">
+      <DependentUpon>DesbloquearOperacionAUsuariocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DigitosVerificadores.resx">
+      <DependentUpon>DigitosVerificadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstablecerCadena.resx">
+      <DependentUpon>EstablecerCadena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="falloDV.resx">
+      <DependentUpon>falloDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearNegocio.resx">
+      <DependentUpon>CrearNegocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HacerRestore.resx">
+      <DependentUpon>HacerRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\Espanol.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Espanol.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\Ingles.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Ingles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportarExportarPedidos.resx">
+      <DependentUpon>ImportarExportarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificacionFamilia.resx">
+      <DependentUpon>ModificacionFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarMedio.resx">
+      <DependentUpon>ModificarMedio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarPerfilUsuario.resx">
+      <DependentUpon>ModificarPerfilUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HacerBackUp.resx">
+      <DependentUpon>HacerBackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportarBitacora.resx">
+      <DependentUpon>ImportarBitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogOut.resx">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUbicacion.resx">
+      <DependentUpon>ModificarUbicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUsuarios.resx">
+      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyUser.resx">
+      <DependentUpon>ModifyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RealizarRestore.resx">
+      <DependentUpon>RealizarRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{24feeda7-ff0f-4d71-be62-2a641f505f2b}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{98fdd201-8806-4c7b-b792-3d9d767f9e77}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj">
+      <Project>{ffee5427-b7dc-4b21-92a5-155da00b4b2b}</Project>
+      <Name>ServiceLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\graybackground.jpg" />
+    <Content Include="loader.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\backgray.jpg" />
+    <None Include="Resources\backgroundgray.bmp" />
+    <None Include="Resources\loader.gif" />
+    <None Include="Resources\Elara-Photo.ico" />
+    <None Include="Resources\iconoelara.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elara_moon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Elara-Photo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,5 @@
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\Interfaces\bin\Debug\Interfaces.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\Interfaces\bin\Debug\Interfaces.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\Interfaces\obj\Debug\Interfaces.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\Interfaces\obj\Debug\Interfaces.pdb

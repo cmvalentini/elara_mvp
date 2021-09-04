@@ -1,0 +1,7 @@
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\BE.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\BE.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\Interfaces.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\Interfaces.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\obj\Debug\BE.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\obj\Debug\BE.pdb

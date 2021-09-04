@@ -1,0 +1,7 @@
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Release\BLL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Release\BLL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Release\DAL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Release\DAL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Release\BLL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Release\BLL.pdb

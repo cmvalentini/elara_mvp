@@ -1,0 +1,8 @@
+la capa dal tiene que conocer a la de servicio, la de servicio no conoce la dal
+
+cuando bll le pide un usuario a la dal, la dal se lo envia a la capa de servicio y la ui lo consulta de ahi.
+
+ver que la dal envie metodos void a la de servicios y qeu servicios la persista
+
+-todos conocen la capa de servicios
+

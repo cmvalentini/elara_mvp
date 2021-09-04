@@ -1,0 +1,27 @@
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\bin\Debug\DAL.dll
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\bin\Debug\DAL.pdb
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Debug\DAL.dll
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Debug\DAL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\bin\Debug\DAL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\bin\Debug\DAL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Debug\DAL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Debug\DAL.pdb
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\DAL\bin\Debug\DAL.dll
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\DAL\bin\Debug\DAL.pdb
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\DAL\obj\Debug\DAL.dll
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\DAL\obj\Debug\DAL.pdb
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\bin\Debug\DAL.dll
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\bin\Debug\DAL.pdb
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Debug\DAL.dll
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Debug\DAL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\DAL\bin\Debug\DAL.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\DAL\bin\Debug\DAL.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\DAL\obj\Debug\DAL.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\DAL\obj\Debug\DAL.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\DAL\bin\Debug\ServiceLayer.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\DAL\bin\Debug\ServiceLayer.pdb

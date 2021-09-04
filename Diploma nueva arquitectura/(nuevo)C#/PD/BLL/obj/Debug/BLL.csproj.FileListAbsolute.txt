@@ -1,0 +1,37 @@
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\BLL.dll
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\BLL.pdb
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\DAL.dll
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\DAL.pdb
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Debug\BLL.dll
+E:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Debug\BLL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\BLL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\BLL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\DAL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\DAL.pdb
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Debug\BLL.dll
+D:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Debug\BLL.pdb
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\BLL\bin\Debug\BLL.dll
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\BLL\bin\Debug\BLL.pdb
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\BLL\bin\Debug\DAL.dll
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\BLL\bin\Debug\DAL.pdb
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\BLL\obj\Debug\BLL.dll
+C:\Users\cvalentini\Desktop\(nuevo)C#\PD\BLL\obj\Debug\BLL.pdb
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\BLL.dll
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\BLL.pdb
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\DAL.dll
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\bin\Debug\DAL.pdb
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Debug\BLL.dll
+F:\Facu\Trabajo de Campo 1\Proyecto Diploma\(nuevo)C#\PD\BLL\obj\Debug\BLL.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BLL\obj\Debug\BLL.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BLL\obj\Debug\BLL.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BLL\bin\Debug\BLL.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BLL\bin\Debug\BLL.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BLL\bin\Debug\DAL.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BLL\bin\Debug\ServiceLayer.dll
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BLL\bin\Debug\DAL.pdb
+E:\Diploma nueva arquitectura\(nuevo)C#\PD\BLL\bin\Debug\ServiceLayer.pdb

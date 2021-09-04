@@ -1,0 +1,137 @@
+<DocumentElement>
+  <Pedidos>
+    <medionombre>Canal 11</medionombre>
+    <iva>21.00</iva>
+    <Nombreubicacion>Home</Nombreubicacion>
+    <razon_social>El Correntino</razon_social>
+    <FechainicioPublicacion>2020-08-07T00:00:00-03:00</FechainicioPublicacion>
+    <Preciopedido>75000.000</Preciopedido>
+    <Impresiones>5000</Impresiones>
+  </Pedidos>
+  <Pedidos>
+    <medionombre>Canal 11</medionombre>
+    <iva>21.00</iva>
+    <Nombreubicacion>Home</Nombreubicacion>
+    <razon_social>Ster International</razon_social>
+    <FechainicioPublicacion>2020-07-21T00:00:00-03:00</FechainicioPublicacion>
+    <Preciopedido>15000.000</Preciopedido>
+    <Impresiones>1000</Impresiones>
+  </Pedidos>
+  <Pedidos>
+    <medionombre>Canal 8</medionombre>
+    <iva>10.50</iva>
+    <Nombreubicacion>ROS</Nombreubicacion>
+    <razon_social>El Correntino</razon_social>
+    <FechainicioPublicacion>2020-08-19T00:00:00-03:00</FechainicioPublicacion>
+    <Preciopedido>45670.000</Preciopedido>
+    <Impresiones>4567</Impresiones>
+  </Pedidos>
+  <Pedidos>
+    <medionombre>Canal 8</medionombre>
+    <iva>10.50</iva>
+    <Nombreubicacion>ROS</Nombreubicacion>
+    <razon_social>El Correntino</razon_social>
+    <FechainicioPublicacion>2020-08-19T00:00:00-03:00</FechainicioPublicacion>
+    <Preciopedido>456780.000</Preciopedido>
+    <Impresiones>45678</Impresiones>
+  </Pedidos>
+  <Pedidos>
+    <medionombre>Diario Ole</medionombre>
+    <iva>10.50</iva>
+    <Nombreubicacion>LEFT BANNER</Nombreubicacion>
+    <razon_social>El Correntino</razon_social>
+    <FechainicioPublicacion>2020-08-04T00:00:00-03:00</FechainicioPublicacion>
+    <Preciopedido>85110.000</Preciopedido>
+    <Impresiones>5674</Impresiones>
+  </Pedidos>
+</DocumentElement><?xml version="1.0"?>
+<DataTable>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Pedidos" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Pedidos">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="medionombre">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="iva" type="xs:decimal" />
+                <xs:element name="Nombreubicacion">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="30" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="razon_social">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="FechainicioPublicacion" type="xs:dateTime" />
+                <xs:element name="Preciopedido" type="xs:decimal" />
+                <xs:element name="Impresiones" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+    <DocumentElement>
+      <Pedidos diffgr:id="Pedidos1" msdata:rowOrder="0">
+        <medionombre>Canal 11</medionombre>
+        <iva>21.00</iva>
+        <Nombreubicacion>Home</Nombreubicacion>
+        <razon_social>El Correntino</razon_social>
+        <FechainicioPublicacion>2020-08-07T00:00:00-03:00</FechainicioPublicacion>
+        <Preciopedido>75000.000</Preciopedido>
+        <Impresiones>5000</Impresiones>
+      </Pedidos>
+      <Pedidos diffgr:id="Pedidos2" msdata:rowOrder="1">
+        <medionombre>Canal 11</medionombre>
+        <iva>21.00</iva>
+        <Nombreubicacion>Home</Nombreubicacion>
+        <razon_social>Ster International</razon_social>
+        <FechainicioPublicacion>2020-07-21T00:00:00-03:00</FechainicioPublicacion>
+        <Preciopedido>15000.000</Preciopedido>
+        <Impresiones>1000</Impresiones>
+      </Pedidos>
+      <Pedidos diffgr:id="Pedidos3" msdata:rowOrder="2">
+        <medionombre>Canal 8</medionombre>
+        <iva>10.50</iva>
+        <Nombreubicacion>ROS</Nombreubicacion>
+        <razon_social>El Correntino</razon_social>
+        <FechainicioPublicacion>2020-08-19T00:00:00-03:00</FechainicioPublicacion>
+        <Preciopedido>45670.000</Preciopedido>
+        <Impresiones>4567</Impresiones>
+      </Pedidos>
+      <Pedidos diffgr:id="Pedidos4" msdata:rowOrder="3">
+        <medionombre>Canal 8</medionombre>
+        <iva>10.50</iva>
+        <Nombreubicacion>ROS</Nombreubicacion>
+        <razon_social>El Correntino</razon_social>
+        <FechainicioPublicacion>2020-08-19T00:00:00-03:00</FechainicioPublicacion>
+        <Preciopedido>456780.000</Preciopedido>
+        <Impresiones>45678</Impresiones>
+      </Pedidos>
+      <Pedidos diffgr:id="Pedidos5" msdata:rowOrder="4">
+        <medionombre>Diario Ole</medionombre>
+        <iva>10.50</iva>
+        <Nombreubicacion>LEFT BANNER</Nombreubicacion>
+        <razon_social>El Correntino</razon_social>
+        <FechainicioPublicacion>2020-08-04T00:00:00-03:00</FechainicioPublicacion>
+        <Preciopedido>85110.000</Preciopedido>
+        <Impresiones>5674</Impresiones>
+      </Pedidos>
+    </DocumentElement>
+  </diffgr:diffgram>
+</DataTable>
