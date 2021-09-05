@@ -226,3 +226,7 @@ E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.RealizarRestore.resou
 E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.csproj.GenerateResource.Cache
 E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\ServiceLayer.dll
 E:\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\ServiceLayer.pdb
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\PD\bin\Debug\PD.exe.config
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.csproj.ResolveComReference.cache
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.exe
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\PD\obj\Debug\PD.pdb
