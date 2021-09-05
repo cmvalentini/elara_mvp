@@ -57,6 +57,7 @@ namespace BE
             this.Habilitado = habilitado;
             this.Clave = clave;
         }
+        public Usuario() { }
 
 
 

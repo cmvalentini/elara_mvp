@@ -53,10 +53,11 @@
     <Compile Include="IdiomaDAL.cs" />
     <Compile Include="ManejadorPerfilUsuario.cs" />
     <Compile Include="MedioDAL.cs" />
+    <Compile Include="OperacionDAL.cs" />
     <Compile Include="PedidoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UbicacionDAL.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Conection\conectionfile.xml" />

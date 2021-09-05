@@ -9,52 +9,16 @@ using System.Threading.Tasks;
 namespace DAL
 {
     [Serializable]
-    public class Usuario  
+    public class UsuarioDAL  
     {
-         public string apellido { get; set; }
-         public int  dni { get; set; }
-        public string email { get; set; }
-        public bool habilitado { get; set; }
-        public string nombre { get; set; }
-        public string _Usuario { get; set; }
-        public int FlagIntentosLogin { get; set; }
-        public int UsuarioID { get; set; }
-
-        public string clavesinencriptar { get; set; }
-
+        
         Conexion con = new Conexion();
         DigitosVerificadores dv = new DigitosVerificadores();
-        
+        BE.Usuario UsuarioBE = new BE.Usuario();
         DataTable dt = new DataTable();
+        
 
-        public string Clave { get; set; }
-        public Usuario(int Usuarioid,string _Usuario, string apellido, string nombre, string email, int dni, bool habilitado,int FlagIntentos)
-        {
-            this.UsuarioID = Usuarioid;
-            this._Usuario = _Usuario;
-            this.apellido = apellido;
-            this.nombre = nombre;
-            this.email = email;
-            this.dni = dni;
-            this.habilitado = habilitado;
-            this.FlagIntentosLogin = FlagIntentos;
-          
-        }
-
-        public Usuario(int Usuarioid, string _Usuario, string apellido, string nombre, string email, int dni, bool habilitado, int FlagIntentos,string clavesinencriptar)
-        {
-            this.UsuarioID = Usuarioid;
-            this._Usuario = _Usuario;
-            this.apellido = apellido;
-            this.nombre = nombre;
-            this.email = email;
-            this.dni = dni;
-            this.habilitado = habilitado;
-            this.FlagIntentosLogin = FlagIntentos;
-            this.clavesinencriptar = clavesinencriptar;
-        }
-
-        public Usuario TraerDatosUsuariobyID(int usuid)
+        public BE.Usuario TraerDatosUsuariobyID(int usuid)
         {
 
             string sql = "select UsuarioID,Usuario,Clave,Nombre,Apellido,DNI,Email,Habilitado,FlagIntentosLogin From Usuario " +
@@ -70,16 +34,16 @@ namespace DAL
 
                 if (dt.Rows.Count > 0)
                 {
-                    Console.WriteLine("entró reader " + Convert.ToString(dt.Rows[0][0].ToString()));
+                    Console.WriteLine("entró reader UsuarioDal" + Convert.ToString(dt.Rows[0][0].ToString()));
 
-                    this.UsuarioID = Convert.ToInt32(dt.Rows[0][0].ToString());
-                    this._Usuario = Convert.ToString(dt.Rows[0][1].ToString());
-                    this.apellido = Convert.ToString(dt.Rows[0][4].ToString());
-                    this.nombre = Convert.ToString(dt.Rows[0][3].ToString());
-                    this.email = Convert.ToString(dt.Rows[0][6].ToString());
-                    this.dni = Convert.ToInt32(dt.Rows[0][5].ToString());
-                    this.habilitado = Convert.ToBoolean(dt.Rows[0][7].ToString());
-                    this.FlagIntentosLogin = Convert.ToInt32(dt.Rows[0][8].ToString());
+                    UsuarioBE.UsuarioID = Convert.ToInt32(dt.Rows[0][0].ToString());
+                    UsuarioBE._Usuario = Convert.ToString(dt.Rows[0][1].ToString());
+                    UsuarioBE.Apellido = Convert.ToString(dt.Rows[0][4].ToString());
+                    UsuarioBE.Nombre = Convert.ToString(dt.Rows[0][3].ToString());
+                    UsuarioBE.Email = Convert.ToString(dt.Rows[0][6].ToString());
+                    UsuarioBE.Dni = Convert.ToInt32(dt.Rows[0][5].ToString());
+                    UsuarioBE.Habilitado = Convert.ToBoolean(dt.Rows[0][7].ToString());
+                    UsuarioBE.FlagIntentosLogin = Convert.ToInt32(dt.Rows[0][8].ToString());
 
                 }
                 else
@@ -88,23 +52,22 @@ namespace DAL
 
                 }
 
-                Usuario usu = new Usuario(this.UsuarioID, this._Usuario, this.apellido, this.nombre, this.email, this.dni, this.habilitado, this.FlagIntentosLogin);
-
-                return usu;
+                 
+                return UsuarioBE;
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                UsuarioBE.Result = ex.Message;
             }
 
 
 
         }
 
-        public void Blanquearintentos(int usuarioid) {
-            string sql = "update usuario set  FlagIntentosLogin = 0 where UsuarioID = "+ usuarioid;
+        public void Blanquearintentos(BE.Usuario usube) {
+            string sql = "update usuario set  FlagIntentosLogin = 0 where UsuarioID = "+ usube.UsuarioID;
 
             DataTable dt = new DataTable();
             dt = con.Ejecutarreader(sql);
@@ -137,7 +100,7 @@ namespace DAL
 
         }
 
-        public Usuario BuscarUsuario(string usuario, string clave)
+        public UsuarioDAL BuscarUsuario(string usuario, string clave)
         {
             string sql = "select UsuarioID,Usuario,Clave,Nombre,Apellido,DNI,Email,Habilitado,FlagIntentosLogin from Usuario where Usuario = '" + usuario + "'" +
                 "and Clave ='"+ clave +"';";
@@ -169,7 +132,7 @@ namespace DAL
 
                 }
 
-                Usuario usu = new Usuario(this.UsuarioID, this._Usuario, this.apellido, this.nombre, this.email, this.dni, this.habilitado, this.FlagIntentosLogin);
+                UsuarioDAL usu = new UsuarioDAL(this.UsuarioID, this._Usuario, this.apellido, this.nombre, this.email, this.dni, this.habilitado, this.FlagIntentosLogin);
 
                 return usu;
 
@@ -382,9 +345,9 @@ namespace DAL
             return result;
         }
 
-        public Usuario() { }
+        public UsuarioDAL() { }
 
-        public Usuario(string _Usuario, string apellido, string nombre, string email, int dni, bool habilitado,string clave)
+        public UsuarioDAL(string _Usuario, string apellido, string nombre, string email, int dni, bool habilitado,string clave)
         {
             this._Usuario = _Usuario;
             this.apellido = apellido;
@@ -445,7 +408,7 @@ namespace DAL
 
                 }
 
-       Usuario usu = new Usuario(this.UsuarioID, this._Usuario, this.apellido, this.nombre, this.email, this.dni, this.habilitado, this.FlagIntentosLogin);
+       UsuarioDAL usu = new UsuarioDAL(this.UsuarioID, this._Usuario, this.apellido, this.nombre, this.email, this.dni, this.habilitado, this.FlagIntentosLogin);
 
                 ServiceLayer.Sesion ss =  ServiceLayer.Sesion.GetInstance();
                 ss.UsuarioID = usu.UsuarioID;
@@ -475,7 +438,7 @@ namespace DAL
 
         }
 
-        public Usuario BuscarUsuario(string usuario)
+        public UsuarioDAL BuscarUsuario(string usuario)
         {
             string sql = "select UsuarioID,Usuario,Clave,Nombre,Apellido,DNI,Email,Habilitado,FlagIntentosLogin from Usuario where Usuario = '" + usuario + "'";
 
@@ -506,7 +469,7 @@ namespace DAL
 
                 }
 
-                Usuario usu = new Usuario(this.UsuarioID,this._Usuario,this.apellido, this.nombre, this.email, this.dni, this.habilitado,this.FlagIntentosLogin);
+                UsuarioDAL usu = new UsuarioDAL(this.UsuarioID,this._Usuario,this.apellido, this.nombre, this.email, this.dni, this.habilitado,this.FlagIntentosLogin);
 
                 return usu;
 
