@@ -8,7 +8,7 @@ namespace BE
 {
    public class Usuario
     {
-
+        public Seguridad.PerfilUsuario PerfilUsuario;
         public Seguridad.Operacion OP ;
         public int UsuarioID { get; set; }
         public string _Usuario { get; set; }
@@ -24,7 +24,7 @@ namespace BE
         List<BE.Seguridad.Operacion> ListaOperaciones;
 
         public Usuario(string _usuario, string apellido, string nombre, string email,
-            int dni, bool habilitado,List<BE.Seguridad.Operacion> listaoperaciones)
+            int dni, bool habilitado,List<BE.Seguridad.Operacion> listaoperaciones,Seguridad.PerfilUsuario perfil)
         {
             _Usuario = _usuario;
             Apellido = apellido;
@@ -33,6 +33,7 @@ namespace BE
             Dni = dni;
             Habilitado = habilitado;
             ListaOperaciones = listaoperaciones;
+            PerfilUsuario = perfil;
         }
 
         public Usuario(string _usuario, string apellido, string nombre, string email, int dni, bool habilitado, string clave, string clavesinencriptar)

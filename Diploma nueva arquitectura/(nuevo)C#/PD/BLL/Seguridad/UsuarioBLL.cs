@@ -12,11 +12,11 @@ namespace BLL
         BE.Usuario usuarioBE = new BE.Usuario();
         public UsuarioBLL() { }
 
-        public BE.Usuario TraerDatosUsuariobyID(int usuid)
+        public BE.Usuario TraerDatosUsuariobyID(BE.Usuario usube) //usuid
         {
             DAL.UsuarioDAL usu = new DAL.UsuarioDAL();
             
-            usuarioBE = usu.TraerDatosUsuariobyID(usuid);
+            usuarioBE = usu.TraerDatosUsuariobyID(usube);
                       
 
             return usuarioBE;
@@ -24,11 +24,11 @@ namespace BLL
 
         }
 
-        public BE.Usuario traerDatosPerfil(string nombreUsuario)
+        public BE.Usuario traerDatosPerfil(BE.Usuario usube)
         {
                        
             DAL.UsuarioDAL usu = new DAL.UsuarioDAL();
-            usuarioBE._Usuario = usu.traerDatosPerfil(nombreUsuario);
+            usuarioBE.PerfilUsuario = usu.traerDatosPerfil(usube);
             return usuarioBE;
 
         }
