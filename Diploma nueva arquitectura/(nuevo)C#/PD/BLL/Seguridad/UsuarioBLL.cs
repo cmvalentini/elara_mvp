@@ -88,7 +88,7 @@ namespace BLL
 
         public BE.Usuario verificarPatentesBloqueo(BE.Usuario usube,BE.Seguridad.Operacion opbe)
         {
-            DAL.ManejadorPerfilUsuario MPU = new DAL.ManejadorPerfilUsuario();
+            DAL.ManejadorPerfilUsuarioDAL MPU = new DAL.ManejadorPerfilUsuarioDAL();
             usube.Result = MPU.verificarPatentesBloqueo(usube, opbe);
 
             return usube;

@@ -45,6 +45,7 @@
     <Compile Include="Medio.cs" />
     <Compile Include="Pedido.cs" />
     <Compile Include="Seguridad\Encriptacion.cs" />
+    <Compile Include="Seguridad\ManejadorPerfilUsuario.cs" />
     <Compile Include="Seguridad\Operacion.cs" />
     <Compile Include="Seguridad\PerfilUsuario.cs" />
     <Compile Include="Ubicacion.cs" />

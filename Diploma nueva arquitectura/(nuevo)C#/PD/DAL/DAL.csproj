@@ -51,7 +51,7 @@
     <Compile Include="EmailService.cs" />
     <Compile Include="EncriptacionDAL.cs" />
     <Compile Include="IdiomaDAL.cs" />
-    <Compile Include="ManejadorPerfilUsuario.cs" />
+    <Compile Include="ManejadorPerfilUsuarioDAL.cs" />
     <Compile Include="MedioDAL.cs" />
     <Compile Include="OperacionDAL.cs" />
     <Compile Include="PedidoDAL.cs" />

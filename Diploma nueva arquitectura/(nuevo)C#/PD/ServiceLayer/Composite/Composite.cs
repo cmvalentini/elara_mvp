@@ -16,7 +16,7 @@ namespace ServiceLayer.Composite
         {
         }
 
-        public override List<string> obtenerpatente
+        public override List<BE.Seguridad.Operacion> obtenerpatente
         {
             get
             {
@@ -31,7 +31,7 @@ namespace ServiceLayer.Composite
 
        
 
-    public void ObtenerHijos(List<string> listaoperacionesusuario)
+    public void ObtenerHijos(List<BE.Seguridad.Operacion> listaoperacionesusuario)
         {
             _hijos = this.devolerinstanciapermisos();
             foreach (var operacion in listaoperacionesusuario)

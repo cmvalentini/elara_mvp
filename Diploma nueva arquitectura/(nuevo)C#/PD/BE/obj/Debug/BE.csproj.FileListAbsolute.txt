@@ -5,3 +5,10 @@ E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\Interfaces.dll
 E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\Interfaces.pdb
 E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\obj\Debug\BE.dll
 E:\Diploma nueva arquitectura\(nuevo)C#\PD\BE\obj\Debug\BE.pdb
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\BE.dll
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\BE.pdb
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\Interfaces.dll
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\BE\bin\Debug\Interfaces.pdb
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\BE\obj\Debug\BE.dll
+C:\Users\Charly\Documents\Visual Studio 2015\Projects\elara_mvp\Diploma nueva arquitectura\(nuevo)C#\PD\BE\obj\Debug\BE.pdb

@@ -9,10 +9,9 @@ namespace BE.Seguridad
   public class PerfilUsuario
     {
         public string NombrePerfil { get; set; }
-
+        public string DescPerfil { get; set; }
         public PerfilUsuario() { }
-
-
+        public int PerfilUsuarioID { get; set; }
 
     }
 }

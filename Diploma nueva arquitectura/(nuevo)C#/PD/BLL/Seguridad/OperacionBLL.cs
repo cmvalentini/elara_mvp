@@ -24,7 +24,7 @@ namespace BLL.Seguridad
 
         public BE.Usuario verificarPatentesEscenciales(List<BE.Seguridad.Operacion> operacioneshuerfanas, BE.Usuario usube)// ophuerfanas,nombreusuario
         {
-            DAL.ManejadorPerfilUsuario MPU = new DAL.ManejadorPerfilUsuario();
+            DAL.ManejadorPerfilUsuarioDAL MPU = new DAL.ManejadorPerfilUsuarioDAL();
             usube.Result = MPU.verificarPatentesEscenciales(operacioneshuerfanas, usube);
 
             return usube;
@@ -32,7 +32,7 @@ namespace BLL.Seguridad
 
         public BE.Usuario verificarPatentesEscenciales(BE.Usuario usube) //UsuarioID
         {
-            DAL.ManejadorPerfilUsuario MPU = new DAL.ManejadorPerfilUsuario();
+            DAL.ManejadorPerfilUsuarioDAL MPU = new DAL.ManejadorPerfilUsuarioDAL();
             usube.Result = MPU.verificarPatentesEscenciales(usube);
 
             return usube;
@@ -40,7 +40,7 @@ namespace BLL.Seguridad
 
         public BE.Usuario verificarPatentesEscenciales(BE.Usuario usube)
         {
-            DAL.ManejadorPerfilUsuario MPU = new DAL.ManejadorPerfilUsuario();
+            DAL.ManejadorPerfilUsuarioDAL MPU = new DAL.ManejadorPerfilUsuarioDAL();
             usube.Result = MPU.verificarPatentesEscenciales(usube);
 
             return usube;
