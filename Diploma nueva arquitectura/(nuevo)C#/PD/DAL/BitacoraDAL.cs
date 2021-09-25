@@ -3,7 +3,7 @@ using System.Data;
 
 namespace DAL
 {
-    public class Bitacora
+    public class BitacoraDAL
     {
         DigitosVerificadores dv = new DigitosVerificadores();
         Conexion con = new Conexion();
