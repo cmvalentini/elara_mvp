@@ -21,7 +21,7 @@ namespace PD
         DataTable listm = new DataTable();
         DataTable listcli = new DataTable();
         BLL.UbicacionBLL ubi = new BLL.UbicacionBLL();
-        BLL.Cliente agencias = new BLL.Cliente();
+        BLL.ClienteBLL agencias = new BLL.ClienteBLL();
         BLL.MedioBLL medio = new BLL.MedioBLL();
         decimal Preciopedido;
         decimal precioubicacion;

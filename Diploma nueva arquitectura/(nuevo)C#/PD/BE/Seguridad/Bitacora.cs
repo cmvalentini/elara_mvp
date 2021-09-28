@@ -15,7 +15,7 @@ namespace BE.Seguridad
         public string NombreOperacion { get; set; }
 
         public int Usuarioid { get; set; }
-
+        public string result { get; set; }
 
     }
 }

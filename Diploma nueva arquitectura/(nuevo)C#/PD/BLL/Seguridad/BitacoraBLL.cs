@@ -24,32 +24,27 @@ namespace BLL
 
         }
  
-        public DataTable traerUsuarios()
+        public List<BE.Usuario> traerUsuarios()
         {
-            DataTable datausuario = new DataTable();
+            List<BE.Usuario> listausuario = new List<BE.Usuario>();
             DAL.BitacoraDAL log = new DAL.BitacoraDAL();
-            datausuario = log.traerUsuarios();
-            return datausuario;
+            listausuario = log.traerUsuarios();
+            return listausuario;
 
 
         }
 
-        public string IngresarDatoBitacora(string NombreOperacion,string Descripcion,int Criticidad,int Usuarioid)
+        public BE.Seguridad.Bitacora IngresarDatoBitacora(string NombreOperacion,string Descripcion,int Criticidad,int Usuarioid)
         {
 
-
-            DAL.BitacoraDAL log = new DAL.BitacoraDAL();
-
+            BE.Seguridad.Bitacora log = new BE.Seguridad.Bitacora();
+            DAL.BitacoraDAL logdal = new DAL.BitacoraDAL();
             
-           string rta = log.IngresarDatoBitacora(NombreOperacion, Descripcion, Criticidad,Usuarioid);
+            log.result = logdal.IngresarDatoBitacora(NombreOperacion, Descripcion, Criticidad,Usuarioid);
 
-            return rta;
+            return log;
 
         }
-
-        public void Exportar_a_Excel()
-        {
-            throw new System.NotImplementedException();
-        }
+ 
     }
 }

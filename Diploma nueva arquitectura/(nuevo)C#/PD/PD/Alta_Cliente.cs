@@ -12,7 +12,7 @@ namespace PD
 {
     public partial class Alta_Cliente : Defaultform
     {
-        BLL.Cliente cli = new BLL.Cliente();
+        BLL.ClienteBLL cli = new BLL.ClienteBLL();
         string result;
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
         BLL.Bitacora log = new BLL.Bitacora();

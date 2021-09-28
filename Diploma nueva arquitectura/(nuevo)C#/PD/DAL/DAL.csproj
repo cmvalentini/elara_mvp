@@ -42,13 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackUpRestore.cs" />
-    <Compile Include="Bitacora.cs" />
+    <Compile Include="BitacoraDAL.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteDAL.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="DigitosVerificadores.cs" />
-    <Compile Include="EmailService.cs" />
+    <Compile Include="EmailServiceDAL.cs" />
     <Compile Include="EncriptacionDAL.cs" />
     <Compile Include="IdiomaDAL.cs" />
     <Compile Include="ManejadorPerfilUsuarioDAL.cs" />

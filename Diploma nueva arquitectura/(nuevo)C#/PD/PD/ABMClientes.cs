@@ -16,7 +16,7 @@ namespace PD
         DataGridViewButtonColumn uninstallButtonColumn = new DataGridViewButtonColumn();
         DataGridViewButtonColumn ModifyButtonColumn = new DataGridViewButtonColumn();
 
-        BLL.Cliente cli = new BLL.Cliente();
+        BLL.ClienteBLL cli = new BLL.ClienteBLL();
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
         MenuPrincipal mp = MenuPrincipal.Instance;
         DataTable dt = new DataTable();

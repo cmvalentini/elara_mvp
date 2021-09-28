@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class EmailService
+    public class EmailServiceDAL
     {
         System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
         public void EnviarEmail(string edestino, string mensaje){

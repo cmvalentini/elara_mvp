@@ -43,13 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractBLL.cs" />
-    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteBLL.cs" />
     <Compile Include="Composite.cs" />
     <Compile Include="directorioperfil.cs" />
     <Compile Include="MedioBLL.cs" />
     <Compile Include="PedidoBLL.cs" />
     <Compile Include="Seguridad\BackRestore.cs" />
-    <Compile Include="Seguridad\Bitacora.cs" />
+    <Compile Include="Seguridad\BitacoraBLL.cs" />
     <Compile Include="Seguridad\Config.cs" />
     <Compile Include="Seguridad\ControladorGeneral.cs" />
     <Compile Include="Seguridad\Datos.cs" />

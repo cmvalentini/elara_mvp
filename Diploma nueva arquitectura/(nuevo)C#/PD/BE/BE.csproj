@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractBE.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Idioma\Idioma.cs" />
     <Compile Include="Medio.cs" />
     <Compile Include="Pedido.cs" />
+    <Compile Include="Seguridad\Bitacora.cs" />
     <Compile Include="Seguridad\Encriptacion.cs" />
     <Compile Include="Seguridad\ManejadorPerfilUsuario.cs" />
     <Compile Include="Seguridad\Operacion.cs" />

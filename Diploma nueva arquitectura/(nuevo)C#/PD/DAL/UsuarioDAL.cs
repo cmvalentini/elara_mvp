@@ -194,7 +194,7 @@ namespace DAL
             dv.RecalcularDVH();
 
 
-            EmailService es = new EmailService();
+            EmailServiceDAL es = new EmailServiceDAL();
 
             es.EnviarEmail(email, UsuBE.clavesinencriptar);
 
@@ -357,7 +357,7 @@ namespace DAL
              string result = con.Ejecutar(sql);
             dv.RecalcularDVH();
 
-            EmailService mail = new EmailService();
+            EmailServiceDAL mail = new EmailServiceDAL();
             mail.EnviarEmail(UsuBE.Email, "Se ha generado la clave: "+ UsuBE.clavesinencriptar + " para el usuario:" + UsuBE._Usuario);
 
         }
