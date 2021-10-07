@@ -182,9 +182,8 @@ namespace DAL
 
             }
 
-            catch (Exception) {
-                throw;
-
+            catch (Exception ex) {
+                return ex.Message;
                 
             }
 
@@ -193,10 +192,7 @@ namespace DAL
 
              
         }
-        internal string Modificar(string sql)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         internal DataTable Ejecutarreader(string sql) //SELECCIONAR DATOS
         {
