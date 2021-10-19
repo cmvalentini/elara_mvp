@@ -16,10 +16,10 @@ namespace PD
 
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
  
-        BLL.Bitacora log = new BLL.Bitacora();
-
-        //cargo el help
-    
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
+        List<BE.Usuario> listausuarios = new List<BE.Usuario>();
+        BE.Usuario usuBE = new BE.Usuario();
+        BE.Seguridad.Bitacora LogBE = new BE.Seguridad.Bitacora();
 
         public void cargar() {
 
@@ -42,10 +42,10 @@ namespace PD
 
             //dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //traigo usuarios y los cargo
-            BLL.Usuario usu = new BLL.Usuario();
-            DataTable dt = new DataTable();
-            dt = usu.MostrarUsuarios();
-            dgvUsuarios.DataSource = dt;
+            BLL.UsuarioBLL usu = new BLL.UsuarioBLL();
+
+            listausuarios = usu.MostrarUsuarios();
+            dgvUsuarios.DataSource = listausuarios;
 
 
             //añado boton borrar usuario
@@ -92,10 +92,10 @@ namespace PD
         private void actualizar_automatico_Tick(object sender, EventArgs e)
         {
             //traigo usuarios y los cargo
-            BLL.Usuario usu = new BLL.Usuario();
-            DataTable dt = new DataTable();
-            dt = usu.MostrarUsuarios();
-            dgvUsuarios.DataSource = dt;
+            BLL.UsuarioBLL usu = new BLL.UsuarioBLL();
+            
+            listausuarios = usu.MostrarUsuarios();
+            dgvUsuarios.DataSource = listausuarios;
 
 
             dgvUsuarios.AllowUserToAddRows = false;
@@ -136,13 +136,13 @@ namespace PD
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            BLL.Usuario usu = new BLL.Usuario();
+            BLL.UsuarioBLL usu = new BLL.UsuarioBLL();
             if (e.ColumnIndex == dgvUsuarios.Columns["ModificarUsuario"].Index)
             {
                 //Modify 
-               
-                string usuid = dgvUsuarios.Rows[e.RowIndex].Cells[2].Value.ToString();
-                ModifyUser mu = new ModifyUser(usuid);
+
+                usuBE.UsuarioID = Convert.ToInt16(dgvUsuarios.Rows[e.RowIndex].Cells[2].Value.ToString());
+                ModifyUser mu = new ModifyUser(usuBE);
              
                 mu.Show();
 
@@ -152,37 +152,38 @@ namespace PD
             else if (e.ColumnIndex == dgvUsuarios.Columns["BorrarUsuario"].Index)
             {
                 //delete it!
-                
-                string usuid = dgvUsuarios.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+                usuBE.UsuarioID = Convert.ToInt16(dgvUsuarios.Rows[e.RowIndex].Cells[2].Value.ToString());
 
 
               
 
-                if ((MessageBox.Show("¿Esta seguro que desea Eliminar al usuario " +usu.Nombre+" de forma permanente?", "Eliminar Usuario",
+                if ((MessageBox.Show("¿Esta seguro que desea Eliminar al usuario " + usuBE._Usuario+" de forma permanente?", "Eliminar Usuario",
     MessageBoxButtons.YesNo, MessageBoxIcon.Question,
     MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes))
                 {
                     try
                     {
+                        BLL.Seguridad.OperacionBLL OP = new BLL.Seguridad.OperacionBLL();
                         
-                        string Eliminar = usu.verificarPatentesEscenciales(Convert.ToInt16(usuid));
+                        usuBE = OP.verificarPatentesEscenciales(usuBE);
 
-                        if (Eliminar == "True")
+                        if (usuBE.Result == "True")
                         {
 
 
 
-                           
-                            log.Criticidad = 2;
+
+                            LogBE.Criticidad = 2;
                             string a = dgvUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString();
                             string b = dgvUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString();
-                            log.Descripcion = a + " " + b;
-                            log.FechayHora = DateTime.Now;
-                            log.NombreOperacion = "Eliminar Usuario";
+                            LogBE.Descripcion = a + " " + b;
+                            LogBE.FechayHora = DateTime.Now;
+                            LogBE.NombreOperacion = "Eliminar Usuario";
 
-                            log.IngresarDatoBitacora(cryp.Encriptar(log.NombreOperacion), cryp.Encriptar(log.Descripcion), log.Criticidad, usu.UsuarioID);
+                            log.IngresarDatoBitacora(cryp.Encriptar(LogBE.NombreOperacion).ToString(), cryp.Encriptar(LogBE.Descripcion).ToString(), LogBE.Criticidad, usuBE.UsuarioID);
 
-                            string result = usu.EliminarUsuario(Convert.ToInt16(usuid));
+                            usuBE = usu.EliminarUsuario(usuBE);
 
 
                             // Recargar DataGrid
@@ -192,7 +193,7 @@ namespace PD
                         }
                         else
                         {
-                            MessageBox.Show("Usuario con Patentes Unicas,no se puede eliminar!,Patentes: " + Eliminar, "Error al Borrado" ,MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            MessageBox.Show("Usuario con Patentes Unicas,no se puede eliminar!,Patentes: " + usuBE.Result, "Error al Borrado" ,MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         
                       
                         }

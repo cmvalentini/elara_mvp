@@ -9,9 +9,10 @@ namespace BE.Seguridad
    public class Encriptacion
     {
         public string Result { get; set; }
-        public readonly string key = "MasterKey";
+        
         public int Longitud { get; set; }
         public string Texto { get; set; }
+         
         public string TextoEncriptado { get; set; }
 
         public Encriptacion() { }

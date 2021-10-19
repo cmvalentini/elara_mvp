@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BE.Seguridad
+using BE.Seguridad;
 
 namespace BLL
 {
@@ -23,7 +23,7 @@ namespace BLL
         /// <summary>
         ///Verifica en base si existe el perfil descrito
         /// </summary>
-        public ManejadorPerfilUsuario VerificarAltafamilia(ManejadorPerfilUsuario mpu) //nombrePerfil
+        public PerfilUsuario VerificarAltafamilia(PerfilUsuario mpu) //nombrePerfil
         {
             DAL.ManejadorPerfilUsuarioDAL MPU = new DAL.ManejadorPerfilUsuarioDAL();
             mpu = MPU.VerificarAltafamilia(mpu);
@@ -43,17 +43,17 @@ namespace BLL
         }
     
 
-        public ManejadorPerfilUsuario _CrearPerfilUsuario(PerfilUsuario perfil) //string NombrePerfil,string DescPerfil
+        public PerfilUsuario _CrearPerfilUsuario(PerfilUsuario perfil) //string NombrePerfil,string DescPerfil
         {
             DAL.ManejadorPerfilUsuarioDAL mpuDAL = new DAL.ManejadorPerfilUsuarioDAL();
-            BE.Seguridad.ManejadorPerfilUsuario mpuBE = new ManejadorPerfilUsuario();
-            mpuBE.Result = mpuBE._CrearPerfilUsuario(perfil);
+            BE.Seguridad.PerfilUsuario mpuBE = new PerfilUsuario();
+            mpuBE = mpuDAL._CrearPerfilUsuario(perfil);
 
 
             return mpuBE;
         }
 
-        public ManejadorPerfilUsuario ModificarPerfilUsuario(ManejadorPerfilUsuario mpu) //NombrePerfil, DescPerfil, perfilID
+        public PerfilUsuario ModificarPerfilUsuario(PerfilUsuario mpu) //NombrePerfil, DescPerfil, perfilID
         {
             mpu.Result = "False";
 
@@ -61,7 +61,7 @@ namespace BLL
             {
                 DAL.ManejadorPerfilUsuarioDAL mpuDAL = new DAL.ManejadorPerfilUsuarioDAL();
 
-                mpu.Result = mpuDAL.ModificarPerfilUsuario(mpu);
+                mpu = mpuDAL.ModificarPerfilUsuario(mpu);
 
                 return mpu;
             }
@@ -79,22 +79,22 @@ namespace BLL
 
 
 
-        public void DesbloqueaOperacionaUsuario(ManejadorPerfilUsuario mpu,BE.Seguridad.Operacion op) //string NombreUsuario,String Patente
+        public void DesbloqueaOperacionaUsuario(BE.Usuario usuBE ,BE.Seguridad.Operacion op) //string NombreUsuario,String Patente
         {
             DAL.ManejadorPerfilUsuarioDAL mpudal = new DAL.ManejadorPerfilUsuarioDAL();
 
-            mpudal.DesbloqueaOperacionaUsuario(mpu, op);
+            mpudal.DesbloqueaOperacionaUsuario(usuBE, op);
              
         }
 
-        public ManejadorPerfilUsuario EliminarPerfilUsuario(ManejadorPerfilUsuario mpu ) //PerfilID
+        public BE.Seguridad.PerfilUsuario EliminarPerfilUsuario(PerfilUsuario mpu ) //PerfilID
         {
             mpu.Result = "False";
 
             try
             {
                 DAL.ManejadorPerfilUsuarioDAL mpuDAL = new DAL.ManejadorPerfilUsuarioDAL();
-                if (mpuDAL.EliminarPerfilUsuario(mpu.PerfilID) == "True")
+                if (mpuDAL.EliminarPerfilUsuario(mpu).ToString() == "True")
                 {
                     mpu.Result = "True";
                 }
@@ -123,7 +123,7 @@ namespace BLL
             return listaoperaciones;
         }
   
-        public List<Operacion> MostrarListaOperaciones(ManejadorPerfilUsuario mpu ) //perfilID
+        public List<Operacion> MostrarListaOperaciones(PerfilUsuario mpu ) //perfilID
         {
             listaoperaciones.Clear(); 
             DAL.ManejadorPerfilUsuarioDAL mpudal = new DAL.ManejadorPerfilUsuarioDAL();
@@ -134,7 +134,7 @@ namespace BLL
         }
        
 
-        public void AsignarOperacionesalPerfil(ManejadorPerfilUsuario mpu, List<Operacion> listaoperacionesperfil)
+        public void AsignarOperacionesalPerfil(PerfilUsuario mpu, List<Operacion> listaoperacionesperfil)
         {
             DAL.ManejadorPerfilUsuarioDAL mpudal = new DAL.ManejadorPerfilUsuarioDAL();
             mpudal.AsignarOperacionesalPerfil(mpu, listaoperacionesperfil);
@@ -158,12 +158,12 @@ namespace BLL
 
         }
 
-        public ManejadorPerfilUsuario AsignarUsuarioaPerfil(ManejadorPerfilUsuario mpu, BE.Usuario usu) // nombreperfil,   nombreUsuario
+        public PerfilUsuario AsignarUsuarioaPerfil(PerfilUsuario mpu, BE.Usuario usu) // nombreperfil,   nombreUsuario
         {
             mpu.Result = "";
             DAL.ManejadorPerfilUsuarioDAL MPU = new DAL.ManejadorPerfilUsuarioDAL();
              
-            mpu.Result = MPU.AsignarUsuarioaPerfil(mpu, usu);
+            mpu = MPU.AsignarUsuarioaPerfil(mpu, usu);
 
             return mpu;
         }

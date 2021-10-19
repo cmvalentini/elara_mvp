@@ -14,10 +14,10 @@ namespace DAL
         DataTable dt = new DataTable();
 
         public MedioDAL() { }
-        public void AltaMedio(string medionombre, string descripcion, string iva)
+        public void AltaMedio(BE.Medio medio) //medionombre, descripcion, iva
         {
             string sql = "insert into Medio (medionombre,descripcion,iva) values"+
-                         " ('"+ medionombre +"','"+ descripcion + "',CAST('" +iva+ "'AS DECIMAL(4, 2)) ) ";
+                         " ('"+ medio.Medionombre + "','"+ medio.Descripcion + "',CAST('" + medio .Iva+ "'AS DECIMAL(4, 2)) ) ";
           
 
             con.Ejecutar(sql);
@@ -49,11 +49,11 @@ namespace DAL
             return listamedio;
         }
 
-        public BE.Medio seleccionarMedio(int medioid)
+        public BE.Medio seleccionarMedio(BE.Medio medio)
         {
             BE.Medio medioBE = new BE.Medio();
             string sql = "select descripcion,medionombre,iva from medio " +
-                       " where medioid = "+ medioid +";";
+                       " where medioid = "+ medio.medioid + ";";
 
             dt = con.Ejecutarreader(sql);
 
@@ -72,35 +72,36 @@ namespace DAL
             
                 }
 
-        public int traernumeropedido()
+        public BE.Pedido traernumeropedido()
         {
-            int numeropedido = 0;
+            BE.Pedido ped = new BE.Pedido();
+            ped.pedidoid = 0;
             string sql = "select top(1)pedidoid from pedido order by 1 desc";
             dt = con.Ejecutarreader(sql);
 
             foreach (DataRow item in dt.Rows)
             {
-              numeropedido =   Convert.ToInt16(item[0].ToString()) + 1;
+                ped.pedidoid  =   Convert.ToInt16(item[0].ToString()) + 1;
             }
 
 
-            return numeropedido;
+            return ped;
         }
 
-        public string Eliminarmedio(Int16 medioid)
+        public BE.Medio Eliminarmedio(BE.Medio medio)
         {
-
-           string sql = "delete medio where medioid = "+ medioid + ";";
+        
+           string sql = "delete medio where medioid = "+ medio.medioid + ";";
             try
             {
                 con.Ejecutar(sql);
-                aux = "True";
+                medio.Result = "True";
             }
             catch (Exception exp)
             {
-                aux = exp.Message;
+                medio.Result = exp.Message;
             }
-                return aux;
+                return medio;
                     
 
         }

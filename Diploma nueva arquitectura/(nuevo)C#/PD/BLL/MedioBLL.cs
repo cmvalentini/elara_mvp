@@ -15,20 +15,20 @@ namespace BLL
 
          
 
-        public void DarAlta(string medionombre, string descripcion, string iva)
+        public void DarAlta(BE.Medio medio)
         {
             DAL.MedioDAL dalmedio = new DAL.MedioDAL();
 
-            dalmedio.AltaMedio(medionombre,descripcion,iva);
+            dalmedio.AltaMedio(medio);
 
         }
 
-        public BE.Medio seleccionarMedio(int medioid)
+        public BE.Medio seleccionarMedio(BE.Medio medio)
         {
             DAL.MedioDAL dalmedio = new DAL.MedioDAL();
             BE.Medio medioBE = new BE.Medio();
 
-            medioBE = dalmedio.seleccionarMedio(medioid);
+            medioBE = dalmedio.seleccionarMedio(medio);
 
              
 
@@ -38,7 +38,7 @@ namespace BLL
         public void modificarmedio(BE.Medio medio)
         {
             DAL.MedioDAL dalmedio = new DAL.MedioDAL();      
-            dalmedio.modificarmedio(dalmedio);
+            dalmedio.modificarmedio(medio);
 
         }
 
@@ -51,22 +51,22 @@ namespace BLL
             return listamedios;
         }
 
-        public int traernumeropedido()
+        public BE.Pedido traernumeropedido()
         {
             DAL.MedioDAL medio = new DAL.MedioDAL();
-            int numeropedido;
-            numeropedido = medio.traernumeropedido();
-            return numeropedido;
+            BE.Pedido pedidoBE = new BE.Pedido();
+            pedidoBE = medio.traernumeropedido();
+            return pedidoBE;
 
         }
 
-        public string Eliminarmedio(Int16 medioid)
+        public BE.Medio Eliminarmedio(BE.Medio medioBE)
         {
-            string result = "";
+            
             DAL.MedioDAL dalmedio = new DAL.MedioDAL();
-           result = dalmedio.Eliminarmedio(medioid);
+            medioBE = dalmedio.Eliminarmedio(medioBE);
 
-            return result;
+            return medioBE;
         }
     }
 }

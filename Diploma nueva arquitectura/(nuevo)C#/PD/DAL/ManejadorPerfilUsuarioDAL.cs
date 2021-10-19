@@ -8,7 +8,7 @@ namespace DAL
     public class ManejadorPerfilUsuarioDAL
     {
         DigitosVerificadores dv = new DigitosVerificadores();
-        BE.Seguridad.ManejadorPerfilUsuario mpu = new BE.Seguridad.ManejadorPerfilUsuario();
+        BE.Seguridad.PerfilUsuario mpu = new BE.Seguridad.PerfilUsuario();
      
         Conexion con = new Conexion();
 
@@ -84,7 +84,7 @@ namespace DAL
         
         ///hacer la verificacion si existe familia antes de dar el alta
         
-        public BE.Seguridad.ManejadorPerfilUsuario VerificarAltafamilia(BE.Seguridad.ManejadorPerfilUsuario mpu ) //nombrePerfil
+        public BE.Seguridad.PerfilUsuario VerificarAltafamilia(BE.Seguridad.PerfilUsuario mpu ) //nombrePerfil
         {
             string sql = " select case when count(NombrePerfil) <> 0 then 1 else 0  end 'columna'  from PerfilUsuario where NombrePerfil like '" + mpu.NombrePerfil+"'";
             mpu.Result = "0";
@@ -113,11 +113,11 @@ namespace DAL
             dv.RecalcularDVH();
         }
 
-        public BE.Seguridad.ManejadorPerfilUsuario ModificarPerfilUsuario(BE.Seguridad.ManejadorPerfilUsuario mpu) // nombrePerfil, descPerfil, perfilID
+        public BE.Seguridad.PerfilUsuario ModificarPerfilUsuario(BE.Seguridad.PerfilUsuario mpu) // nombrePerfil, descPerfil, perfilID
         {
             
             string sql = "Update perfilusuario set NombrePerfil = '" + mpu.NombrePerfil + "',DescPerfil= '" + mpu.DescPerfil + "'" +
-                 " where PerfilUsuarioID = " + mpu.PerfilID + ";";
+                 " where PerfilUsuarioID = " + mpu.PerfilUsuarioID + ";";
 
             try
             {
@@ -138,7 +138,7 @@ namespace DAL
             }
         }
 
-        public BE.Seguridad.ManejadorPerfilUsuario verificarPatentesBloqueo(BE.Usuario usu, BE.Seguridad.Operacion patente)
+        public BE.Seguridad.PerfilUsuario verificarPatentesBloqueo(BE.Usuario usu, BE.Seguridad.Operacion patente)
         {
              
             
@@ -167,11 +167,11 @@ namespace DAL
 
         }
 
-        public BE.Seguridad.ManejadorPerfilUsuario EliminarPerfilUsuario(BE.Seguridad.ManejadorPerfilUsuario mpu)
+        public BE.Seguridad.PerfilUsuario EliminarPerfilUsuario(BE.Seguridad.PerfilUsuario mpu)
         {
             
-            string sql = "Delete perfilusuario where PerfilUsuarioID = "+mpu.PerfilID +";" +
-                       "Delete perfiloperacion where PerfilUsuarioID = "+ mpu.PerfilID + ";";
+            string sql = "Delete perfilusuario where PerfilUsuarioID = "+mpu.PerfilUsuarioID +";" +
+                       "Delete perfiloperacion where PerfilUsuarioID = "+ mpu.PerfilUsuarioID + ";";
 
             try
             {
@@ -189,7 +189,7 @@ namespace DAL
            
         }
 
-        public BE.Seguridad.ManejadorPerfilUsuario _CrearPerfilUsuario(BE.Seguridad.ManejadorPerfilUsuario mpu) // string nombrePerfil, string descPerfil
+        public BE.Seguridad.PerfilUsuario _CrearPerfilUsuario(BE.Seguridad.PerfilUsuario mpu) // string nombrePerfil, string descPerfil
         {
             string sql = "insert into PerfilUsuario(NombrePerfil,DescPerfil,DVH) values('" + mpu.NombrePerfil+"','"+mpu.DescPerfil+"',NULL)";
 
@@ -222,14 +222,14 @@ namespace DAL
 
          }
 
-        public List<BE.Seguridad.Operacion> MostrarListaOperaciones(BE.Seguridad.ManejadorPerfilUsuario mpu )// perfilID
+        public List<BE.Seguridad.Operacion> MostrarListaOperaciones(BE.Seguridad.PerfilUsuario mpu )// perfilID
         {
             List<BE.Seguridad.Operacion> listaoperaciones1 = new List<BE.Seguridad.Operacion>();
             listaoperaciones1.Clear();
             DataTable dt = new DataTable();
 
             //si viene parametro NombrePerfil
-            if (  mpu.PerfilID.ToString() == "" && mpu.NombrePerfil != null)
+            if (  mpu.PerfilUsuarioID.ToString() == "" && mpu.NombrePerfil != null)
             {
                 string sql = " Select op.Descripcion from perfiloperacion po inner join" +
                  " operacion op on op.OperacionID = po.Operacionid " +
@@ -238,11 +238,11 @@ namespace DAL
                 dt = con.Ejecutarreader(sql);
             }
             //si viene parametro PerfilID
-            else if (mpu.PerfilID.ToString() != "")
+            else if (mpu.PerfilUsuarioID.ToString() != "")
                     {
                 string sql1 = "Select op.Descripcion from perfiloperacion po inner join " +
                 " operacion op on op.OperacionID = po.Operacionid " +
-                " where PerfilUsuarioID = " + mpu.PerfilID;
+                " where PerfilUsuarioID = " + mpu.PerfilUsuarioID;
                 dt = con.Ejecutarreader(sql1);
             }
             
@@ -262,7 +262,7 @@ namespace DAL
         }
         
 
-        public BE.Seguridad.ManejadorPerfilUsuario AsignarUsuarioaPerfil(BE.Seguridad.ManejadorPerfilUsuario mpu, BE.Usuario usu) //  nombreperfil,   nombreUsuario
+        public BE.Seguridad.PerfilUsuario AsignarUsuarioaPerfil(BE.Seguridad.PerfilUsuario mpu, BE.Usuario usu) //  nombreperfil,   nombreUsuario
         {
             
            string sql = "  Delete usuariofamilia where UsuarioID = ( "+
@@ -340,15 +340,15 @@ namespace DAL
 
         }
 
-        public List<BE.Seguridad.ManejadorPerfilUsuario>  BuscarPerfilUsuarios()
+        public List<BE.Seguridad.PerfilUsuario>  BuscarPerfilUsuarios()
         {
             DataTable dt = new DataTable();
 
             string sql = "Select PerfilUsuarioID,NombrePerfil,DescPerfil,DVH from perfilusuario";
 
 
-            List<BE.Seguridad.ManejadorPerfilUsuario> listaperfiles = new List<BE.Seguridad.ManejadorPerfilUsuario>();
-            BE.Seguridad.ManejadorPerfilUsuario mpu = new BE.Seguridad.ManejadorPerfilUsuario();
+            List<BE.Seguridad.PerfilUsuario> listaperfiles = new List<BE.Seguridad.PerfilUsuario>();
+            BE.Seguridad.PerfilUsuario mpu = new BE.Seguridad.PerfilUsuario();
             con.Conectar();
 
             con.Ejecutarreader(sql);
@@ -356,7 +356,7 @@ namespace DAL
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                mpu.PerfilID =  Convert.ToInt16(dt.Rows[i][0].ToString());
+                mpu.PerfilUsuarioID =  Convert.ToInt16(dt.Rows[i][0].ToString());
                 mpu.NombrePerfil = dt.Rows[i][1].ToString();
                 mpu.DescPerfil = dt.Rows[i][2].ToString();
                 listaperfiles.Add(mpu);
@@ -367,9 +367,9 @@ namespace DAL
 
 
         }
-        public BE.Seguridad.ManejadorPerfilUsuario verificarPatentesEscenciales(List<BE.Seguridad.Operacion> operacioneshuerfanas,BE.Usuario NombreUsuario)
+        public BE.Usuario verificarPatentesEscenciales(List<BE.Seguridad.Operacion> operacioneshuerfanas,BE.Usuario NombreUsuario)
         {
-             
+            BE.Usuario UsuBE = new BE.Usuario();
            // operacioneshuerfanas = new List<string>();
             foreach (BE.Seguridad.Operacion item in operacioneshuerfanas)
             {
@@ -382,27 +382,28 @@ namespace DAL
 
                 if (Data.Rows.Count > 0)
                 {
-                    mpu.Result = "True";
-                    return mpu;
+                    UsuBE.Result = "True";
+                    return UsuBE;
                 }
 
                 else
                 {
                     foreach (DataRow row in Data.Rows)
                     {
-                        mpu.Result = mpu.Result + "--" + row[0].ToString() + "--";
+                        UsuBE.Result = UsuBE.Result + "--" + row[0].ToString() + "--";
                     }
                 }
                
             }
-            return mpu;
+            return UsuBE;
            
 
         }
 
 
-        public BE.Seguridad.ManejadorPerfilUsuario verificarPatentesEscenciales(BE.Usuario usu)
+        public BE.Usuario verificarPatentesEscenciales(BE.Usuario usu)
         {
+            BE.Usuario usuBE = new BE.Usuario();
             DataTable DT = new DataTable();
             if (usu._Usuario != "" && usu.UsuarioID.ToString() == "")
             {
@@ -432,14 +433,14 @@ namespace DAL
             if (DT.Rows.Count > 0){
                foreach (DataRow row in DT.Rows){
 
-                   mpu.Result = mpu.Result + "--" + row[0].ToString() + "--";
+                    usuBE.Result = usuBE.Result + "--" + row[0].ToString() + "--";
                }
                 Console.WriteLine(mpu.Result);
-               return mpu;
+               return usuBE;
                                 }
            else{
-                mpu.Result = "True";
-               return mpu;
+                usuBE.Result = "True";
+               return usuBE;
                }
            
 

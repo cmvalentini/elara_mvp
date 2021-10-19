@@ -12,14 +12,16 @@ namespace PD
 {
     public partial class ABMClientes : Form
     {
-        BLL.Bitacora log = new BLL.Bitacora();
+        BE.Seguridad.Bitacora LogBE = new BE.Seguridad.Bitacora();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
         DataGridViewButtonColumn uninstallButtonColumn = new DataGridViewButtonColumn();
         DataGridViewButtonColumn ModifyButtonColumn = new DataGridViewButtonColumn();
-
+        List<BE.Cliente> listaclientes = new List<BE.Cliente>();
+        BE.Cliente ClienteBE = new BE.Cliente();
         BLL.ClienteBLL cli = new BLL.ClienteBLL();
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
         MenuPrincipal mp = MenuPrincipal.Instance;
-        DataTable dt = new DataTable();
+         
         public void Show(object sender, EventArgs e)
         {
             this.Show();
@@ -42,8 +44,8 @@ namespace PD
             //traigo usuarios y los cargo
 
 
-            dt = cli.BuscarClientes();
-            dgvClientes.DataSource = dt;
+            listaclientes = cli.BuscarClientes();
+            dgvClientes.DataSource = listaclientes;
 
 
             //añado boton borrar cliente
@@ -79,10 +81,8 @@ namespace PD
 
 
 
-            dt.Clear();
-
-            dt = cli.BuscarClientes();
-            dgvClientes.DataSource = dt;
+            listaclientes = cli.BuscarClientes();
+            dgvClientes.DataSource = listaclientes;
 
             dgvClientes.AllowUserToAddRows = false;
         }
@@ -119,7 +119,7 @@ namespace PD
                 }
                 else if (e.ColumnIndex == dgvClientes.Columns["BorrarCliente"].Index)
                 {
-                    string clienteid = dgvClientes.Rows[e.RowIndex].Cells["clienteid"].Value.ToString();
+                    ClienteBE.Clienteid = Convert.ToInt16(dgvClientes.Rows[e.RowIndex].Cells["clienteid"].Value.ToString());
 
 
 
@@ -129,28 +129,28 @@ namespace PD
                     {
 
 
-                        string Eliminar = cli.EliminarCliente(Convert.ToInt16(clienteid));
+                        ClienteBE = cli.EliminarCliente(ClienteBE);
 
-                        if (Eliminar == "True")
+                        if (ClienteBE.result == "True")
                         {
 
-                            log.Criticidad = 2;
+                            LogBE.Criticidad = 2;
                             string a = dgvClientes.Rows[e.RowIndex].Cells[3].Value.ToString();
                             string b = dgvClientes.Rows[e.RowIndex].Cells[3].Value.ToString();
-                            log.Descripcion = a + " " + b;
-                            log.FechayHora = DateTime.Now;
-                            log.NombreOperacion = "Eliminar Cliente";
+                            LogBE.Descripcion = a + " " + b;
+                            LogBE.FechayHora = DateTime.Now;
+                            LogBE.NombreOperacion = "Eliminar Cliente";
 
-                            log.IngresarDatoBitacora(cryp.Encriptar(log.NombreOperacion), cryp.Encriptar(log.Descripcion), log.Criticidad, mp.Usuarioid);
+                            log.IngresarDatoBitacora(cryp.Encriptar(LogBE.NombreOperacion).ToString(), cryp.Encriptar(LogBE.Descripcion).ToString(), LogBE.Criticidad, mp.Usuarioid);
 
                             // Recargar DataGrid
                             this.Load += new EventHandler(ABMClientes_Load);
-                            MessageBox.Show("Eliminación satifactoria" + Eliminar, "Eliminación OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Eliminación satifactoria" + ClienteBE.result, "Eliminación OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
                         else
                         {
-                            MessageBox.Show("Error en la eliminación del Cliente " + Eliminar, "Error al Borrado", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            MessageBox.Show("Error en la eliminación del Cliente " + ClienteBE.result, "Error al Borrado", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         }
 
                     }

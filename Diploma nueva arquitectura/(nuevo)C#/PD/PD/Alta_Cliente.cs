@@ -13,9 +13,11 @@ namespace PD
     public partial class Alta_Cliente : Defaultform
     {
         BLL.ClienteBLL cli = new BLL.ClienteBLL();
+        BE.Cliente cliBE = new BE.Cliente();
         string result;
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
-        BLL.Bitacora log = new BLL.Bitacora();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
+        BE.Seguridad.Bitacora LogBE = new BE.Seguridad.Bitacora();
        ServiceLayer.Sesion usulog = ServiceLayer.Sesion.GetInstance();
         public Alta_Cliente()
         {
@@ -33,29 +35,29 @@ namespace PD
                 }
                 else
                 {
-                    cli.Condicion_fiscal = cmbCondicionFiscal.Text;
-                    cli.Domicilio = txtdomicilio.Text;
-                    cli.razon_social = txtRazonSocial.Text;
-                    cli.telefono = txttelefono.Text;
+                    cliBE.Condicion_fiscal = cmbCondicionFiscal.Text;
+                    cliBE.Domicilio = txtdomicilio.Text;
+                    cliBE.razon_social = txtRazonSocial.Text;
+                    cliBE.telefono = txttelefono.Text;
 
                     if (chkhabilitado.Checked)
                     {
-                        cli.Habilitado = 1;
+                        cliBE.Habilitado = 1;
                     }
                     else
                     {
-                        cli.Habilitado = 0;
+                        cliBE.Habilitado = 0;
                     }
 
-                    cli.daraltacliente(cli);
+                    cli.daraltacliente(cliBE);
 
                     MessageBox.Show("Alta de cliente Exitosa ", "Alta de Cliente OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    log.NombreOperacion = cryp.Encriptar("Alta Cliente");
-                    log.Descripcion = cryp.Encriptar("Alta de " + txtRazonSocial.Text + " realizada con Exito!");
-                    log.Criticidad = 1;
+                    LogBE.NombreOperacion = cryp.Encriptar("Alta Cliente").ToString();
+                    LogBE.Descripcion = cryp.Encriptar("Alta de " + txtRazonSocial.Text + " realizada con Exito!").ToString();
+                    LogBE.Criticidad = 1;
 
-                    string rta = log.IngresarDatoBitacora(log.NombreOperacion, log.Descripcion, log.Criticidad, usulog.UsuarioID);
+                    log.IngresarDatoBitacora(LogBE.NombreOperacion.ToString(), LogBE.Descripcion.ToString(), Convert.ToInt16(LogBE.Criticidad), usulog.UsuarioID);
 
 
 

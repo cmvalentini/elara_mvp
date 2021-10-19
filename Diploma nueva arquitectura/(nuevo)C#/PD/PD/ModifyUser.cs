@@ -13,10 +13,10 @@ namespace PD
     public partial class ModifyUser : Defaultform
     {
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
-        BLL.Usuario usu = new BLL.Usuario();
-        BLL.Bitacora log = new BLL.Bitacora();
+        BLL.UsuarioBLL usu = new BLL.UsuarioBLL();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
 
-        public string Dato { get; set; }
+        BE.Usuario usuBE = new BE.Usuario();
 
 
 
@@ -25,10 +25,10 @@ namespace PD
             InitializeComponent();
         }
 
-        public ModifyUser(string dato)
+        public ModifyUser(BE.Usuario dato)
         {
             InitializeComponent();
-            Dato = dato;
+            usuBE = dato;
         }
 
 
@@ -36,17 +36,17 @@ namespace PD
 
         private void ModifyUser_Load(object sender, EventArgs e)
         {
-            
 
-            usu = usu.TraerDatosUsuariobyID(Convert.ToInt16(Dato));
 
-            txtname.Text = usu.Nombre.ToString();
-            txtdni.Text = usu.Dni.ToString();
-            txtemail.Text = usu.Email.ToString();
-            txtlastname.Text = usu.Apellido.ToString();
-            txtuser.Text = usu._Usuario.ToString();
+            usuBE = usu.TraerDatosUsuariobyID(usuBE);
 
-            if (usu.Habilitado.ToString() == "true")
+            txtname.Text = usuBE.Nombre.ToString();
+            txtdni.Text = usuBE.Dni.ToString();
+            txtemail.Text = usuBE.Email.ToString();
+            txtlastname.Text = usuBE.Apellido.ToString();
+            txtuser.Text = usuBE._Usuario.ToString();
+
+            if (usuBE.Habilitado.ToString() == "true")
             {
                 checkHabilitado.Checked = true;
             }
@@ -68,7 +68,11 @@ namespace PD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            int oresult = usu.verificarDuplicidad(int.Parse(txtdni.Text), txtemail.Text,txtuser.Text, Convert.ToInt16(Dato));
+            usuBE.Dni = int.Parse(txtdni.Text);
+            usuBE.Email = txtemail.Text;
+            usuBE._Usuario = txtuser.Text;
+
+            int oresult = usu.verificarDuplicidad(usuBE);
              
             switch (oresult)
             {       
@@ -102,7 +106,7 @@ namespace PD
                             check = false;
                         }
                         string result = usu.ModificarDatosUsuario(txtuser.Text, txtlastname.Text, txtname.Text, txtemail.Text,
-                                    Convert.ToInt64(txtdni.Text), check, usu.UsuarioID);
+                                    Convert.ToInt64(txtdni.Text), check, usuBE.UsuarioID);
 
                         MessageBox.Show(result);
 

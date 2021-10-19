@@ -45,7 +45,7 @@ namespace BLL
         public BE.Cliente EliminarCliente(BE.Cliente cli) // clienteid
         {
 
-            ClienteBE.result =  dalcli.EliminarCliente(cli);
+            ClienteBE =  dalcli.EliminarCliente(cli);
 
             return ClienteBE;
         }

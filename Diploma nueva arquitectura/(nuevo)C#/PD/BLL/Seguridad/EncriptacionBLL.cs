@@ -11,19 +11,19 @@ namespace BLL.Seguridad
     public class EncriptacionBLL
     {
         BE.Seguridad.Encriptacion cryp = new BE.Seguridad.Encriptacion();
-        
+        public readonly string key = "MasterKey";
 
-       public BE.Seguridad.Encriptacion Encriptar(BE.Seguridad.Encriptacion cryp) {
+        public BE.Seguridad.Encriptacion Encriptar(string  Texto) {
 
             byte[] keyArray;
      
-            byte[] Arreglo_a_Cifrar = UTF8Encoding.UTF8.GetBytes(cryp.Texto.ToString());
+            byte[] Arreglo_a_Cifrar = UTF8Encoding.UTF8.GetBytes(Texto.ToString());
 
             MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
 
              
             //se guarda la llave para que se le realice hashing
-            keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(cryp.key.ToString()));
+            keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key.ToString()));
 
             hashmd5.Clear();
 
@@ -46,18 +46,18 @@ namespace BLL.Seguridad
         }
 
 
-        public BE.Seguridad.Encriptacion Desencriptar(BE.Seguridad.Encriptacion cryp) //string encriptado
+        public BE.Seguridad.Encriptacion Desencriptar(string TextoEncriptado) //string encriptado
         {
             byte[] keyArray;
             //convierte el texto en una secuencia de bytes
-            byte[] Array_a_Descifrar = Convert.FromBase64String(cryp.TextoEncriptado);
+            byte[] Array_a_Descifrar = Convert.FromBase64String(TextoEncriptado);
 
 
             //se llama a las clases que tienen los algoritmos //de encriptación se le aplica hashing
 
             MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
 
-            keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(cryp.key));
+            keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
             hashmd5.Clear();
 
             TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();
@@ -70,7 +70,7 @@ namespace BLL.Seguridad
             byte[] resultArray = cTransform.TransformFinalBlock(Array_a_Descifrar, 0, Array_a_Descifrar.Length);
             tdes.Clear();
 
-            cryp.Texto = UTF8Encoding.UTF8.GetString(resultArray);
+            cryp.Result = UTF8Encoding.UTF8.GetString(resultArray);
 
             return cryp;
         }

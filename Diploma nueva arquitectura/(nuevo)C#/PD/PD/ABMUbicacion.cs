@@ -15,7 +15,7 @@ namespace PD
         BLL.UbicacionBLL ubi = new BLL.UbicacionBLL();
         BE.Ubicacion ubiBE = new BE.Ubicacion();
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
-        BLL.Bitacora log = new BLL.Bitacora();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
         DataGridViewButtonColumn uninstallButtonColumn = new DataGridViewButtonColumn();
         DataGridViewButtonColumn ModifyButtonColumn = new DataGridViewButtonColumn();
         MenuPrincipal mp = MenuPrincipal.Instance;
@@ -64,9 +64,7 @@ namespace PD
         {
             //traigo usuarios y los cargo
 
-            DataTable dt = new DataTable();
-
-            dt.Clear();
+            
 
             dgvubicaciones.DataSource = ubi.TraerUbicaciones();
             dgvubicaciones.AllowUserToAddRows = false;
@@ -100,17 +98,17 @@ namespace PD
             {
                 //Modify 
 
-                string ubicacionid = dgvubicaciones.Rows[e.RowIndex].Cells["ubicacionid"].Value.ToString();
+               ubiBE.Ubicacionid =Convert.ToInt16(dgvubicaciones.Rows[e.RowIndex].Cells["ubicacionid"].Value.ToString());
 
-                ModificarUbicacion mu = new ModificarUbicacion(Convert.ToInt16(ubicacionid));
+                ModificarUbicacion mu = new ModificarUbicacion(ubiBE);
                 mu.Show();//mostrar form modificar
             }
 
             else if (e.ColumnIndex == dgvubicaciones.Columns["Borraubicacion"].Index)
             {
-                //delete at!
+                //delete 
 
-                string ubicacionid = dgvubicaciones.Rows[e.RowIndex].Cells["ubicacionid"].Value.ToString();
+                ubiBE.Ubicacionid = Convert.ToInt16(dgvubicaciones.Rows[e.RowIndex].Cells["ubicacionid"].Value.ToString());
 
 
                 if ((MessageBox.Show("¿Esta seguro que desea Eliminar La Ubicacion de forma permanente?", "Eliminar Ubicación",
@@ -122,7 +120,7 @@ namespace PD
                     {
 
                         //hacer
-                        string Eliminar = ubi.EliminarUbicacion(Convert.ToInt16(ubicacionid));
+                        ubiBE.Result = ubi.EliminarUbicacion(ubiBE);
                        
 
                         if (Eliminar == "True")

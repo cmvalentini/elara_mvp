@@ -16,7 +16,9 @@ namespace PD
         DataGridViewButtonColumn uninstallButtonColumn = new DataGridViewButtonColumn();
         DataGridViewButtonColumn ModifyButtonColumn = new DataGridViewButtonColumn();
         DataGridViewButtonColumn AsignarOperaciones = new DataGridViewButtonColumn();
-
+        BE.Seguridad.PerfilUsuario mpuBE = new BE.Seguridad.PerfilUsuario();
+        List<BE.Seguridad.PerfilUsuario> listampu = new List<BE.Seguridad.PerfilUsuario>();
+        BE.Seguridad.Bitacora LogBE = new BE.Seguridad.Bitacora();
         public ABMFamilias()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace PD
         }
 
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
-        BLL.Bitacora log = new BLL.Bitacora();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
         MenuPrincipal mp = MenuPrincipal.Instance;
 
         public void cargar()
@@ -50,10 +52,10 @@ namespace PD
 
             //dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //traigo usuarios y los cargo
-            BLL.ManejadorPerfilUsuario mpf = new BLL.ManejadorPerfilUsuario();
-            DataTable dt = new DataTable();
-            dt = mpf.BuscarPerfilUsuarios();
-            dgvPerfiles.DataSource = dt;
+            BLL.ManejadorPerfilUsuarioBLL mpf = new BLL.ManejadorPerfilUsuarioBLL();
+             
+            listampu = mpf.BuscarPerfilUsuarios();
+            dgvPerfiles.DataSource = listampu;
 
 
             //añado boton borrar usuario
@@ -88,17 +90,11 @@ namespace PD
 
         private void actualizar_automatico_Tick(object sender, EventArgs e)
         {
-
-            
             //traigo usuarios y los cargo
-            BLL.ManejadorPerfilUsuario mpu = new BLL.ManejadorPerfilUsuario();
-            DataTable dt = new DataTable();
-
-            dt.Clear();
-
-            dt = mpu.BuscarPerfilUsuarios();
-            dgvPerfiles.DataSource = dt;
-
+            BLL.ManejadorPerfilUsuarioBLL mpu = new BLL.ManejadorPerfilUsuarioBLL();
+            listampu.Clear();
+            listampu = mpu.BuscarPerfilUsuarios();
+            dgvPerfiles.DataSource = listampu;
             dgvPerfiles.AllowUserToAddRows = false;
         }
 
@@ -118,14 +114,14 @@ namespace PD
 
         private void dgvPerfiles_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            BLL.ManejadorPerfilUsuario MPU = new BLL.ManejadorPerfilUsuario();
+            BLL.ManejadorPerfilUsuarioBLL MPU = new BLL.ManejadorPerfilUsuarioBLL();
             if (e.ColumnIndex == dgvPerfiles.Columns["ModificarPerfil"].Index)
             {
                 //Modify 
 
-                string PerfilID = dgvPerfiles.Rows[e.RowIndex].Cells["PerfilUsuarioID"].Value.ToString();
+                mpuBE.PerfilUsuarioID = Convert.ToInt16(dgvPerfiles.Rows[e.RowIndex].Cells["PerfilUsuarioID"].Value.ToString());
 
-                ModificacionFamilia mu = new ModificacionFamilia(Convert.ToInt16(PerfilID));
+                ModificacionFamilia mu = new ModificacionFamilia(mpuBE.PerfilUsuarioID);
                  mu.Show();//mostrar form modificar
 
 
@@ -136,7 +132,7 @@ namespace PD
                 //delete it!
                 try
                 {
-                    string PerfilID = dgvPerfiles.Rows[e.RowIndex].Cells["PerfilUsuarioID"].Value.ToString();
+                    mpuBE.PerfilUsuarioID = Convert.ToInt16(dgvPerfiles.Rows[e.RowIndex].Cells["PerfilUsuarioID"].Value.ToString());
            
                  
                 
@@ -147,19 +143,19 @@ namespace PD
                     
 
 
-                        string Eliminar = MPU.EliminarPerfilUsuario(Convert.ToInt16(PerfilID));
+                        mpuBE = MPU.EliminarPerfilUsuario(mpuBE);
 
-                        if (Eliminar == "True")
+                        if (mpuBE.Result == "True")
                         {
                            
-                            log.Criticidad = 2;
+                            LogBE.Criticidad = 2;
                             string a = dgvPerfiles.Rows[e.RowIndex].Cells[3].Value.ToString();
                             string b = dgvPerfiles.Rows[e.RowIndex].Cells[3].Value.ToString();
-                            log.Descripcion = a + " " + b;
-                            log.FechayHora = DateTime.Now;
-                            log.NombreOperacion = "Eliminar Perfil";
+                            LogBE.Descripcion = a + " " + b;
+                            LogBE.FechayHora = DateTime.Now;
+                            LogBE.NombreOperacion = "Eliminar Perfil";
 
-                            log.IngresarDatoBitacora(cryp.Encriptar(log.NombreOperacion), cryp.Encriptar(log.Descripcion), log.Criticidad, mp.Usuarioid);
+                            log.IngresarDatoBitacora(cryp.Encriptar(LogBE.NombreOperacion).ToString(), cryp.Encriptar(LogBE.Descripcion).ToString(), LogBE.Criticidad, mp.Usuarioid);
                             
                 // Recargar DataGrid
                 this.Load += new EventHandler(ABMFamilias_Load);

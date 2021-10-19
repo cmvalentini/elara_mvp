@@ -33,12 +33,12 @@ namespace BLL
 
         }
 
-        public int verificarDuplicidad(BE.Usuario usuBE) //dni,email,usuario,usuarioid
+       public int verificarDuplicidad(BE.Usuario usuBE, int usuarioid) //dni,email,usuario,usuarioid
         {
             int result = 0;
             DAL.UsuarioDAL usu = new DAL.UsuarioDAL();
 
-            result = usu.verificarDuplicidad(usuBE); //dni, email,usuario,usuarioid
+            result = usu.verificarDuplicidad(usuBE,usuarioid); //dni, email,usuario,usuarioid
 
             return result;
             

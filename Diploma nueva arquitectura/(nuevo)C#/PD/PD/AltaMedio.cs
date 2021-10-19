@@ -41,9 +41,11 @@ namespace PD
 
                 else
                 {
-                    string medionombre = txtMedio.Text;
-                    string descripcion = txtdesc.Text;
-                    string iva = cmbIva.Text;
+                    BE.Medio MedioBE = new BE.Medio();
+                    MedioBE.Medionombre = txtMedio.Text;
+                    MedioBE.Descripcion = txtdesc.Text;
+                    MedioBE.Iva =Convert.ToDecimal(cmbIva.Text);
+
 
                     BLL.MedioBLL medio = new BLL.MedioBLL();
                     medio.DarAlta(medionombre, descripcion, iva);

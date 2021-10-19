@@ -18,7 +18,7 @@ namespace PD
             this.Show();
         }
         
-        BLL.Bitacora log = new BLL.Bitacora();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
 
 
@@ -35,12 +35,12 @@ namespace PD
         private void Asignacion_de_Patentes_Load(object sender, EventArgs e)
         {
 
-            DataTable datausuario = new DataTable();
-            datausuario = log.traerUsuarios();
+            List<BE.Usuario> listausuarios = new List<BE.Usuario>();
+            listausuarios = log.traerUsuarios();
  
-            foreach (DataRow item in datausuario.Rows)
+            foreach (BE.Usuario item in listausuarios)
             {
-                cmbUsuario.Items.Add(item[0].ToString());
+                cmbUsuario.Items.Add(item._Usuario);
             }
 
 
@@ -63,11 +63,11 @@ namespace PD
                 }
 
              }
-              catch (Exception){
-                      throw;
-                             }
+              catch (Exception ex){
+                MessageBox.Show(ex.Message);
+            }
          }
 
 
-    }//end class
+    } 
 }

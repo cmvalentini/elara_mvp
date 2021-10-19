@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BE;
 
 namespace PD
 {
     public partial class ABMPerfilesUsuario : Defaultform
     {
-        DataTable dt = new DataTable();
+        List<BE.Seguridad.PerfilUsuario> listaperfiles = new List<BE.Seguridad.PerfilUsuario>();
+
         public ABMPerfilesUsuario()
         {
             InitializeComponent();
@@ -27,11 +29,11 @@ namespace PD
         private void ABMPerfilesUsuario_Load(object sender, EventArgs e)
         {
          
-            BLL.ManejadorPerfilUsuario pu = new BLL.ManejadorPerfilUsuario();
+            BLL.ManejadorPerfilUsuarioBLL pu = new BLL.ManejadorPerfilUsuarioBLL();
 
-            dt = pu.BuscarPerfilUsuarios();
+            listaperfiles = pu.BuscarPerfilUsuarios();
             dgvPerfiles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvPerfiles.DataSource = dt;
+            dgvPerfiles.DataSource = listaperfiles;
         }
 
 

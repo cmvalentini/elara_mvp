@@ -13,5 +13,6 @@ namespace BE.Seguridad
         public PerfilUsuario() { }
         public int PerfilUsuarioID { get; set; }
 
+        public string Result { get; set; }
     }
 }

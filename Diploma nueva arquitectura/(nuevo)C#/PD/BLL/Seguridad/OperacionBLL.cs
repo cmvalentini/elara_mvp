@@ -25,23 +25,23 @@ namespace BLL.Seguridad
         public BE.Usuario verificarPatentesEscenciales(List<BE.Seguridad.Operacion> operacioneshuerfanas, BE.Usuario usube)// ophuerfanas,nombreusuario
         {
             DAL.ManejadorPerfilUsuarioDAL MPU = new DAL.ManejadorPerfilUsuarioDAL();
-            usube.Result = MPU.verificarPatentesEscenciales(operacioneshuerfanas, usube);
+            usube = MPU.verificarPatentesEscenciales(operacioneshuerfanas, usube);
 
             return usube;
         }
 
-        public BE.Usuario verificarPatentesEscenciales(BE.Usuario usube) //UsuarioID
+    /*    public BE.Usuario verificarPatentesEscenciales(BE.Usuario usube) //UsuarioID
         {
             DAL.ManejadorPerfilUsuarioDAL MPU = new DAL.ManejadorPerfilUsuarioDAL();
             usube.Result = MPU.verificarPatentesEscenciales(usube);
 
             return usube;
-        }
+        }*/
 
         public BE.Usuario verificarPatentesEscenciales(BE.Usuario usube)
         {
             DAL.ManejadorPerfilUsuarioDAL MPU = new DAL.ManejadorPerfilUsuarioDAL();
-            usube.Result = MPU.verificarPatentesEscenciales(usube);
+            usube = MPU.verificarPatentesEscenciales(usube);
 
             return usube;
         }

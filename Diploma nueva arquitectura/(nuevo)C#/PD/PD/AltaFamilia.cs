@@ -12,11 +12,12 @@ namespace PD
 {
     public partial class AltaFamilia : Defaultform
     {
-        BLL.ManejadorPerfilUsuario mpu = new BLL.ManejadorPerfilUsuario();
-        BLL.Bitacora log = new BLL.Bitacora();
+
+        BLL.ManejadorPerfilUsuarioBLL mpu = new BLL.ManejadorPerfilUsuarioBLL();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
-
-
+        BE.Seguridad.PerfilUsuario mpuBE = new BE.Seguridad.PerfilUsuario();
+        BE.Seguridad.Bitacora LogBE = new BE.Seguridad.Bitacora();
         PD.MenuPrincipal mp = MenuPrincipal.Instance; 
         
         
@@ -28,11 +29,11 @@ namespace PD
 
         private void button1_Click(object sender, EventArgs e)
         {
-                        
 
-        string nombrePerfil = txtNombrePerfil.Text;
-        string descPerfil = txtDescripcionPerfil.Text;
 
+            mpuBE.NombrePerfil = txtNombrePerfil.Text;
+            mpuBE.DescPerfil = txtDescripcionPerfil.Text;
+        
             if ((txtNombrePerfil.Text == "") || (txtDescripcionPerfil.Text == ""))//no entra
             {
                 MessageBox.Show("Verifique los datos", "Campos de Texto sin asignar", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -42,24 +43,24 @@ namespace PD
             else // Entra
             {
 
-           
-            int verificar  = mpu.VerificarAltafamilia(nombrePerfil);
+             //   int verificar
+             mpuBE.Result  = mpu.VerificarAltafamilia(mpuBE).ToString();
 
-            if (verificar == 1) //ya existe
+            if (Convert.ToInt16(mpuBE.Result) == 1) //ya existe
             {
                 MessageBox.Show("El nombre de Perfil de Usuario ya existe en la base de datos, "+
                                 "Verifique el mismo o cambie el nombre", "Error al Borrado", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-            else if(verificar == 0)//se puede crear
+            else if(Convert.ToInt16(mpuBE.Result) == 0)//se puede crear
             {
-                string rta = mpu._CrearPerfilUsuario(txtNombrePerfil.Text,txtDescripcionPerfil.Text);
+                mpuBE = mpu._CrearPerfilUsuario(mpuBE);
                 MessageBox.Show("Se creo el Perfil de Usuario, configure las operaciones para el mismo", "Creacion de Perfil Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                log.Criticidad = 2;
-                log.Descripcion = txtNombrePerfil.Text + " " + txtDescripcionPerfil.Text;
-                log.FechayHora = DateTime.Now;
-                log.NombreOperacion = "Alta Perfil";
-                log.IngresarDatoBitacora(cryp.Encriptar(log.NombreOperacion), cryp.Encriptar(log.Descripcion), log.Criticidad,mp.Usuarioid);
+                    LogBE.Criticidad = 2;
+                    LogBE.Descripcion = txtNombrePerfil.Text + " " + txtDescripcionPerfil.Text;
+                    LogBE.FechayHora = DateTime.Now;
+                    LogBE.NombreOperacion = "Alta Perfil";
+                    log.IngresarDatoBitacora(cryp.Encriptar(LogBE.NombreOperacion).ToString(), cryp.Encriptar(LogBE.Descripcion).ToString(), LogBE.Criticidad,mp.Usuarioid);
 
                 txtDescripcionPerfil.Text = "";
                 txtNombrePerfil.Text = "";

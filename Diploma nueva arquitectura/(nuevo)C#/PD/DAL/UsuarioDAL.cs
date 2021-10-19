@@ -232,7 +232,7 @@ namespace DAL
 
         }
 
-        public BE.Usuario verificarDuplicidad(BE.Usuario UsuBE,int usuarioid) //dni, email,usuario,usuarioid
+        public int verificarDuplicidad(BE.Usuario UsuBE,int usuarioid) //dni, email,usuario,usuarioid
         {
             
             string sql = " DECLARE @Dni int = (select count(dni) from usuario where dni = " + UsuBE.Dni + " and UsuarioID not in ("+ usuarioid + ")) " +
@@ -245,30 +245,31 @@ namespace DAL
            "   set @result = (select CASE when @Dni = 1 AND @Email = 1 then 3 ELSE @result end) " +
            "  select @result;";
 
-            
+            int result;
             DataTable dt = new DataTable();
             dt = con.Ejecutarreader(sql);
 
             if (dt.Rows.Count > 0)
             {
                 Console.WriteLine("entró reader " + Convert.ToString(dt.Rows[0][0].ToString()));
-                UsuBE.Result = dt.Rows[0][0].ToString();
-                return UsuBE;
+                result = Convert.ToInt16(dt.Rows[0][0].ToString());
+
+                return result;
             }
                                     else
                                     {
-                                        UsuBE.Result = "5";
-                                        return UsuBE;
+                                    result = 5;
+                                        return result;
                                     }
            
            }
 
 
-        public BE.Usuario verificarDuplicidad(BE.Usuario UsuBE) // dni, email, usuario
+        public int verificarDuplicidad(BE.Usuario UsuBE) // dni, email, usuario
         {
             try
             {
-                
+                int result;
                 string sql = " DECLARE @Dni int = (select count(dni) from usuario where dni = " + UsuBE.Dni + ")" +
                  "  DECLARE @Email varchar(50) = (select count(Email) from Usuario where Email like '" + UsuBE.Email + "') " +
                  " DECLARE @Usuario varchar(50) = (select count(Usuario) from Usuario where Usuario like '" + UsuBE._Usuario + "') " +
@@ -286,13 +287,13 @@ namespace DAL
                 if (dt.Rows.Count > 0)
                 {
                     Console.WriteLine("entró reader " + Convert.ToString(dt.Rows[0][0].ToString()));
-                    UsuBE.Result = dt.Rows[0][0].ToString();
-                    return UsuBE;
+                    result = Convert.ToInt16(dt.Rows[0][0].ToString());
+                    return result;
                 }
                 else
                 {
-                    UsuBE.Result = "5";
-                    return UsuBE;
+                    result = 5;
+                    return result;
                 }
 
 
@@ -300,11 +301,11 @@ namespace DAL
             }
             catch (Exception EX)
             {
-                UsuBE.Result = EX.Message.ToString();
+               UsuBE.Result = EX.Message.ToString();
                 Console.WriteLine( "func verificarDuplicidad: " + EX.Message);
-                return UsuBE;
+                return 500;
             }
-           
+
         }
 
 

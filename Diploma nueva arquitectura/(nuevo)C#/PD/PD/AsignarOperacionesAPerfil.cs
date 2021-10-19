@@ -12,42 +12,42 @@ namespace PD
 {
     public partial class AsignarOperacionesAPerfil : Defaultform
     {
-        BLL.ManejadorPerfilUsuario MPU = new BLL.ManejadorPerfilUsuario();
-        List<string> listaoperaciones = new List<string>();
-        int PerfilID;
-        string NombrePerfil;
+        BLL.ManejadorPerfilUsuarioBLL MPU = new BLL.ManejadorPerfilUsuarioBLL();
+        List<BE.Seguridad.Operacion> listaoperaciones = new List<BE.Seguridad.Operacion>();
+        BE.Seguridad.PerfilUsuario PerfilBE = new BE.Seguridad.PerfilUsuario();
         public AsignarOperacionesAPerfil(int _PerfilID,string _NombrePerfil)
         {
             InitializeComponent();
-            PerfilID = _PerfilID;
-            NombrePerfil = _NombrePerfil;
+            PerfilBE.PerfilUsuarioID = _PerfilID;
+            PerfilBE.NombrePerfil = _NombrePerfil;
         }
 
         private void AsignarOperacionesAPerfil_Load(object sender, EventArgs e)
         {
             //Muestro lista de operaciones
-            lblNombreUsuario.Text = this.NombrePerfil;
+            lblNombreUsuario.Text = PerfilBE.NombrePerfil;
             listaoperaciones = MPU.MostrarListaOperaciones();
-            foreach (string item in listaoperaciones)
-            {
+            foreach (BE.Seguridad.Operacion item in listaoperaciones)
+            { 
                 LstOperaciones.Items.Add(item);
             }
-            LstOperaciones.DisplayMember = "Descripcion";
-            LstOperaciones.ValueMember = "Descripcion";
+            LstOperaciones.DisplayMember = "NombreOperacion";
+            LstOperaciones.ValueMember = "NombreOperacion";
 
 
             //Muestro lista del Perfil de Usuario
 
             listaoperaciones.Clear(); // limpio lista y la reutilizo
 
-            listaoperaciones = MPU.MostrarListaOperaciones(this.PerfilID);
-            foreach (string item in listaoperaciones)
-            {
+            listaoperaciones = MPU.MostrarListaOperaciones(PerfilBE);
+            foreach (BE.Seguridad.Operacion item in listaoperaciones)
+            { 
+
                 LstPerfilOperaciones.Items.Add(item);
                 LstOperaciones.Items.Remove(item);
             }
-            LstPerfilOperaciones.DisplayMember = "Descripcion";
-            LstPerfilOperaciones.ValueMember = "Descripcion";
+            LstPerfilOperaciones.DisplayMember = "NombreOperacion";
+            LstPerfilOperaciones.ValueMember = "NombreOperacion";
 
 
 
@@ -109,17 +109,17 @@ namespace PD
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            List<string> listaoperacionesperfil = new List<string>();
-            foreach (string item in LstPerfilOperaciones.Items)
+            List<BE.Seguridad.Operacion> listaoperacionesperfil = new List<BE.Seguridad.Operacion>();
+            foreach (BE.Seguridad.Operacion item in LstPerfilOperaciones.Items)
             {
-                listaoperacionesperfil.Add(item.ToString());
+                listaoperacionesperfil.Add(item);
 
 
             }
 
             try
             {
-               MPU.AsignarOperacionesalPerfil(this.PerfilID, listaoperacionesperfil);
+               MPU.AsignarOperacionesalPerfil(PerfilBE, listaoperacionesperfil);
 
             MessageBox.Show("Operaciones asignadas exitosamente", "Asignacion Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

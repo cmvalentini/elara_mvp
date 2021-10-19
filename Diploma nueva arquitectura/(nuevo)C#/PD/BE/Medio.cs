@@ -12,7 +12,7 @@ namespace BE
         public decimal Iva { get; set; }
         public string Descripcion { get; set; }
         public string Medionombre { get; set; }
-
+        public string Result { get; set; }
         public int medioid { get; set; }
 
         public Medio() { }

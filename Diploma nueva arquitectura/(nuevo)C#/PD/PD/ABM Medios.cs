@@ -12,14 +12,15 @@ namespace PD
 {
     public partial class ABM_Medios : Defaultform
     {
-        BLL.Bitacora log = new BLL.Bitacora();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
+        BE.Seguridad.Bitacora LogBE = new BE.Seguridad.Bitacora();
         DataGridViewButtonColumn uninstallButtonColumn = new DataGridViewButtonColumn();
         DataGridViewButtonColumn ModifyButtonColumn = new DataGridViewButtonColumn();
        // DataGridViewButtonColumn AsignarOperaciones = new DataGridViewButtonColumn();
         BLL.MedioBLL medio = new BLL.MedioBLL();
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
         MenuPrincipal mp = MenuPrincipal.Instance;
-
+        List<BE.Medio> listamedios = new List<BE.Medio>();
         public void Show(object sender, EventArgs e)
         {
             this.Show();
@@ -40,9 +41,9 @@ namespace PD
             //dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //traigo usuarios y los cargo
             BLL.MedioBLL medio = new BLL.MedioBLL();
-            DataTable dt = new DataTable();
-            dt = medio.BuscarMedios();
-            dgvMedios.DataSource = dt;
+            
+            listamedios = medio.BuscarMedios();
+            dgvMedios.DataSource = listamedios;
 
 
             //añado boton borrar usuario
@@ -77,13 +78,11 @@ namespace PD
         private void actualizar_automatico_Tick(object sender, EventArgs e)
         {
             //traigo usuarios y los cargo
-            
-            DataTable dt = new DataTable();
 
-            dt.Clear();
+            listamedios.Clear();
 
-            dt = medio.BuscarMedios();
-            dgvMedios.DataSource = dt;
+            listamedios = medio.BuscarMedios();
+            dgvMedios.DataSource = listamedios;
 
             dgvMedios.AllowUserToAddRows = false;
         }
@@ -127,14 +126,15 @@ MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes))
                         if (Eliminar == "True")
                         {
 
-                            log.Criticidad = 2;
+                            LogBE.Criticidad = 2;
                             string a = dgvMedios.Rows[e.RowIndex].Cells[3].Value.ToString();
                             string b = dgvMedios.Rows[e.RowIndex].Cells[3].Value.ToString();
-                            log.Descripcion = a + " " + b;
-                            log.FechayHora = DateTime.Now;
-                            log.NombreOperacion = "Eliminar Medio";
-
-                            log.IngresarDatoBitacora(cryp.Encriptar(log.NombreOperacion), cryp.Encriptar(log.Descripcion), log.Criticidad, mp.Usuarioid);
+                            LogBE.Descripcion = a + " " + b;
+                            LogBE.FechayHora = DateTime.Now;
+                            LogBE.NombreOperacion = "Eliminar Medio";
+                            BE.Seguridad.Encriptacion cyrp = new BE.Seguridad.Encriptacion();
+                            
+                            log.IngresarDatoBitacora(cryp.Encriptar(LogBE.NombreOperacion).ToString(), cryp.Encriptar(LogBE.Descripcion).ToString(), LogBE.Criticidad, mp.Usuarioid);
 
                             // Recargar DataGrid
                             this.Load += new EventHandler(ABM_Medios_Load);

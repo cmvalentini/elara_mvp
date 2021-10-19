@@ -30,32 +30,32 @@ namespace BLL
               return listaubicaciones;       
         }
 
-        public List<BE.Ubicacion> TraerUbicaciones(string nombremedio)
+        public List<BE.Ubicacion> TraerUbicaciones(BE.Medio medio)
         {
             DAL.Ubicacion ubi = new DAL.Ubicacion();
-            listaubicaciones = ubi.traerubicaciones(nombremedio);
+            listaubicaciones = ubi.traerubicaciones(medio);
 
             return listaubicaciones;
         }
 
-        public List<BE.Ubicacion> TraerMedios()
+        public List<BE.Medio> TraerMedios()
         {
             DAL.Ubicacion ubi = new DAL.Ubicacion();
-            DataTable dt = new DataTable();
+            List<BE.Medio> listamedios = new List<BE.Medio>();
 
-            listaubicaciones = ubi.TraerMedios();
+            listamedios = ubi.TraerMedios();
 
             
 
-            return listaubicaciones;
+            return listamedios;
 
         }
 
-        public BE.Ubicacion seliccionarUbicacion(int ubicacionid)
+        public BE.Ubicacion seliccionarUbicacion(BE.Ubicacion ubibe)//ubicacionid
         {
-            BE.Ubicacion ubicacionBE = new BE.Ubicacion;
+            BE.Ubicacion ubicacionBE = new BE.Ubicacion();
             DAL.Ubicacion ubi = new DAL.Ubicacion();
-            ubicacionBE = ubi.seleccionarUbicacion(ubicacionid);
+            ubicacionBE = ubi.seleccionarUbicacion(ubibe);
 
 
              
@@ -65,54 +65,54 @@ namespace BLL
 
      
 
-        public string daraltaubicacion(BE.Ubicacion ubicacion)
+        public BE.Ubicacion daraltaubicacion(BE.Ubicacion ubicacion)
         {
             DAL.Ubicacion dalubicacion = new DAL.Ubicacion();
 
             
-            rta = dalubicacion.daraltaubicacion(ubicacion);
-
-            return rta;
+            ubicacion = dalubicacion.daraltaubicacion(ubicacion);
+             
+            return ubicacion;
         }
 
-        public decimal traerPrecio(string nombremedio, string ubicacionmedio)
+        public BE.Ubicacion traerPrecio(BE.Ubicacion ubibe) //nombremedio, ubicacionmedio
         {
-            BE.Ubicacion UBICACION = new BE.Ubicacion();
-            decimal precio;
+            
+             
             DAL.Ubicacion dalubicacion = new DAL.Ubicacion();
 
-            UBICACION = dalubicacion.traerPrecio(nombremedio,ubicacionmedio);
-            precio =  UBICACION.Precio;
+            ubibe = dalubicacion.traerPrecio(ubibe);
+            
 
             
-            return precio;
+            return ubibe;
         }
 
-        public string Modificarubicacion(BE.Ubicacion ubicacion)
+        public BE.Ubicacion Modificarubicacion(BE.Ubicacion ubicacion)
         {
             DAL.Ubicacion dalubicacion = new DAL.Ubicacion();
-            
-            rta = dalubicacion.Modificarubicacion(ubicacion);
 
-            return rta;
+            ubicacion = dalubicacion.Modificarubicacion(ubicacion);
+
+            return ubicacion;
 
 
         }
 
-        public string EliminarUbicacion(int ubicacionid)
+        public BE.Ubicacion EliminarUbicacion(BE.Ubicacion ubiBE)
         {
             DAL.Ubicacion dalubicacion = new DAL.Ubicacion();
-            string result = "False";
+            ubiBE.Result = "False";
             try
             {
-                result = dalubicacion.EliminarUbicacion(ubicacionid);
+                ubiBE = dalubicacion.EliminarUbicacion(ubiBE);
 
-                return result;
+                return ubiBE;
             }
             catch (Exception ex)
             {
-                result = ex.Message;
-                return result;
+                ubiBE.Result = ex.Message;
+                return ubiBE;
             }
 
 

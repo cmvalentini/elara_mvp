@@ -12,41 +12,41 @@ namespace PD
 {
     public partial class ModificarUbicacion : Defaultform
     {
-        DataTable listu = new DataTable();
+         
         BLL.UbicacionBLL ubi = new BLL.UbicacionBLL();
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
-        BLL.Bitacora log = new BLL.Bitacora();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
         MenuPrincipal mp = MenuPrincipal.Instance;
-
-
-        
-        int Ubicacionid;
-        public ModificarUbicacion(int ubicacionid)
+        BE.Seguridad.Bitacora logBE = new BE.Seguridad.Bitacora();
+        BE.Ubicacion Ubibe = new BE.Ubicacion();
+        List<BE.Ubicacion> listaubi = new List<BE.Ubicacion>(); 
+       
+        public ModificarUbicacion(BE.Ubicacion UbiBE)
         {
             InitializeComponent();
-            Ubicacionid = ubicacionid;
+            Ubibe = UbiBE;
         }
 
         private void ModificarUbicacion_Load(object sender, EventArgs e)
         {
             //cargar combobox
-            listu = ubi.TraerMedios();
+            listaubi = ubi.TraerMedios();
 
-            foreach (DataRow row in listu.Rows)
+            foreach (BE.Ubicacion row in listaubi)
             {
-                cmbmedio.Items.Add(row[0].ToString());
+                cmbmedio.Items.Add(row.medio);
             }
 
 
-            ubi = ubi.seliccionarUbicacion(Ubicacionid);
+            Ubibe = ubi.seliccionarUbicacion(Ubibe);
 
-            txtformato.Text = ubi.Formato;
-            txtformula.Text = ubi.Formula;
-            txtmedida.Text = ubi.Medida;
-            txtnombreubicacion.Text = ubi.NombreUbicacion;
+            txtformato.Text = Ubibe.Formato;
+            txtformula.Text = Ubibe.Formula;
+            txtmedida.Text = Ubibe.Medida;
+            txtnombreubicacion.Text = Ubibe.NombreUbicacion;
             //cmbmedio.Text = ubi.medio;
-            chkhabilitado.Checked = Convert.ToBoolean(ubi.Habilitado);
-            txtPrecio.Text = ubi.Precio.ToString();
+            chkhabilitado.Checked = Convert.ToBoolean(Ubibe.Habilitado);
+            txtPrecio.Text = Ubibe.Precio.ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -66,34 +66,34 @@ namespace PD
                 }
                 else //entra
                 {
-                    ubi.Formato = txtformato.Text;
-                    ubi.Formula = txtformula.Text;
-                    ubi.medio = cmbmedio.Text;
-                    ubi.Medida = txtmedida.Text;
-                    ubi.NombreUbicacion = txtnombreubicacion.Text;
-                    ubi.Ubicacionid = Ubicacionid.ToString();
-                    ubi.Precio = Convert.ToDecimal(txtPrecio.Text);
+                    Ubibe.Formato = txtformato.Text;
+                    Ubibe.Formula = txtformula.Text;
+                    Ubibe.medio = cmbmedio.Text;
+                    Ubibe.Medida = txtmedida.Text;
+                    Ubibe.NombreUbicacion = txtnombreubicacion.Text;
+                    Ubibe.Ubicacionid = Ubibe.Ubicacionid;
+                    Ubibe.Precio = Convert.ToDecimal(txtPrecio.Text);
 
                     if (chkhabilitado.Checked == true)
                     {
-                        ubi.Habilitado = 1;
+                        Ubibe.Habilitado = 1;
                     }
                     else
                     {
-                        ubi.Habilitado = 0;
+                        Ubibe.Habilitado = 0;
                     }
 
 
-                    string result = ubi.Modificarubicacion(ubi);
+                    Ubibe.Result = ubi.Modificarubicacion(Ubibe);
 
 
                     MessageBox.Show("Se Modificó La ubicación exitosamente", "Modificación de Ubicación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    log.Criticidad = 2;
-                    log.Descripcion = txtnombreubicacion.Text + " " + txtformato.Text;
-                    log.FechayHora = DateTime.Now;
-                    log.NombreOperacion = "Modificacion Ubicación";
-                    log.IngresarDatoBitacora(cryp.Encriptar(log.NombreOperacion), cryp.Encriptar(log.Descripcion), log.Criticidad, mp.Usuarioid);
+                    logBE.Criticidad = 2;
+                    logBE.Descripcion = txtnombreubicacion.Text + " " + txtformato.Text;
+                    logBE.FechayHora = DateTime.Now;
+                    logBE.NombreOperacion = "Modificacion Ubicación";
+                    log.IngresarDatoBitacora(cryp.Encriptar(logBE.NombreOperacion).ToString(), cryp.Encriptar(logBE.Descripcion).ToString(), logBE.Criticidad, mp.Usuarioid);
 
 
                     txtformato.Text = "";

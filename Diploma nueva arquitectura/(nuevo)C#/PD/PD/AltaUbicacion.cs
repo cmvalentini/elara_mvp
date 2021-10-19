@@ -13,12 +13,13 @@ namespace PD
 {
     public partial class AltaUbicacion : Defaultform
     {
-        DataTable listu = new DataTable();
+        
         BLL.UbicacionBLL ubi = new BLL.UbicacionBLL();
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
-        BLL.Bitacora log = new BLL.Bitacora();
+        BLL.BitacoraBLL log = new BLL.BitacoraBLL();
         MenuPrincipal mp = MenuPrincipal.Instance;
-
+        BE.Seguridad.Bitacora LogBE = new BE.Seguridad.Bitacora(); 
+        
         public AltaUbicacion()
         {
             InitializeComponent();
@@ -36,12 +37,12 @@ namespace PD
 
         private void AltaUbicacion_Load(object sender, EventArgs e)
         {
-            //cargar combobox
-            listu = ubi.TraerMedios();
+            List<BE.Medio> listamedios = new List<BE.Medio>();
+            listamedios = ubi.TraerMedios();
 
-            foreach (DataRow row in listu.Rows)
+            foreach (BE.Medio row in listamedios)
             {
-                cmbmedio.Items.Add(row[0].ToString());
+                cmbmedio.Items.Add(row.Medionombre.ToString());
             }
             
              
@@ -59,33 +60,34 @@ namespace PD
                 }
                 else //entra
                 {
-                    ubi.Formato = txtformato.Text;
-                    ubi.Formula = txtformula.Text;
-                    ubi.medio = cmbmedio.Text;
-                    ubi.Medida = txtmedida.Text;
-                    ubi.NombreUbicacion = txtnombreubicacion.Text;
-                    ubi.Precio = Convert.ToDecimal(txtprecio.Text);
+                    BE.Ubicacion ubiBE = new BE.Ubicacion();
+                    ubiBE.Formato = txtformato.Text;
+                    ubiBE.Formula = txtformula.Text;
+                    ubiBE.medio.Medionombre = cmbmedio.Text;
+                    ubiBE.Medida = txtmedida.Text;
+                    ubiBE.NombreUbicacion = txtnombreubicacion.Text;
+                    ubiBE.Precio = Convert.ToDecimal(txtprecio.Text);
 
                     if (chkhabilitado.Checked == true)
                     {
-                        ubi.Habilitado = 1;
+                        ubiBE.Habilitado = 1;
                     }
                     else
                     {
-                        ubi.Habilitado = 0;
+                        ubiBE.Habilitado = 0;
                     }
 
 
-                 string result =  ubi.daraltaubicacion(ubi);
+                    ubiBE =  ubi.daraltaubicacion(ubiBE);
 
                    
                     MessageBox.Show("Se creo La ubicación exitosamente", "Creacion de Ubicación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    log.Criticidad = 2;
-                    log.Descripcion = txtnombreubicacion.Text + " " + txtformato.Text;
-                    log.FechayHora = DateTime.Now;
-                    log.NombreOperacion = "Alta Ubicación";
-                    log.IngresarDatoBitacora(cryp.Encriptar(log.NombreOperacion), cryp.Encriptar(log.Descripcion), log.Criticidad, mp.Usuarioid);
+                    LogBE.Criticidad = 2;
+                    LogBE.Descripcion = txtnombreubicacion.Text + " " + txtformato.Text;
+                    LogBE.FechayHora = DateTime.Now;
+                    LogBE.NombreOperacion = "Alta Ubicación";
+                    log.IngresarDatoBitacora(cryp.Encriptar(LogBE.NombreOperacion).ToString(), cryp.Encriptar(LogBE.Descripcion).ToString(), LogBE.Criticidad, mp.Usuarioid);
 
                     txtformato.Text = "";
                     txtformula.Text = "";
